@@ -31,25 +31,37 @@ export const sections: Section[] = [
     body: (
       <>
         <p className="slide-subtitle">
-          Section Version | September 23, 2025 | Entrusted Classification
+          Detailed Section Version | September 23, 2025 | Entrusted Classification
         </p>
         <p>
-          Built from the OCIO Enterprise Risk Management Framework_09232025,
-          structured as a section-based training for governance, risk ownership,
-          and operational execution.
+          Built from the 09/23/2025 OCIO framework source to support role-based
+          execution of identification, assessment, mitigation, escalation,
+          reporting, and continuous improvement.
         </p>
       </>
     ),
   },
   {
-    title: "Section 1: Framework Overview, Purpose, Authority, Scope",
+    title: "Section 1: Framework Overview",
     variant: "accent",
     body: (
       <ul>
-        <li>Defines OCIO’s structured approach to identifying, assessing, mitigating, and escalating risk.</li>
-        <li>Protects sensitive data, service continuity, and policy compliance across OCIO operations.</li>
-        <li>Authorized by OCIO to guide federal leads and stakeholders using shared processes.</li>
-        <li>Applies to all NSF systems, applications, networks, and personnel within OCIO scope.</li>
+        <li>Defines OCIO’s systematic model for identifying, assessing, mitigating, and escalating risk.</li>
+        <li>Connects risk management to operational resilience across IT and business outcomes.</li>
+        <li>Combines governance, procedures, and process controls into one integrated framework.</li>
+        <li>Establishes a shared operating language for risk across all OCIO branches.</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Purpose, Authority, and Scope",
+    variant: "default",
+    body: (
+      <ul>
+        <li>Purpose: protect sensitive data, ensure service continuity, and sustain policy compliance.</li>
+        <li>Authority: framework is authorized by OCIO to guide federal leads and stakeholders.</li>
+        <li>Scope: applies to all NSF OCIO systems, applications, networks, and personnel.</li>
+        <li>Outcome: proactive decision-making that minimizes disruption to government services.</li>
       </ul>
     ),
   },
@@ -65,26 +77,50 @@ export const sections: Section[] = [
     ),
   },
   {
-    title: "Leadership and Governance Roles",
+    title: "CIO Accountabilities",
     variant: "default",
     body: (
       <ul>
-        <li>CIO sets risk appetite/tolerance and aligns posture to mission and regulatory needs.</li>
-        <li>Enterprise IT Governance Board resolves escalated IT risks and sets IT priorities.</li>
-        <li>Business Demand Governance Board validates mission need and initiative alignment risks.</li>
-        <li>OCIO Risk Governance Lead maintains framework, risk register, dashboards, and training.</li>
+        <li>Sets risk tone for ownership, awareness, and transparency across IT and business.</li>
+        <li>Approves organizational risk appetite and risk tolerance boundaries.</li>
+        <li>Aligns risk posture to mission objectives, strategy, and regulatory context.</li>
+        <li>Reviews enterprise risk profile and communicates key risks to governance and ELT.</li>
       </ul>
     ),
   },
   {
-    title: "Branch Chief and Risk Owner Duties",
+    title: "Governance Board Responsibilities",
     variant: "default",
     body: (
       <ul>
-        <li>Branch Chiefs review moderate-plus risks, validate mitigation, and escalate high/critical risks.</li>
-        <li>Branch Chiefs promote risk-aware culture and ensure adoption of risk procedures.</li>
-        <li>Risk Owners identify, evaluate, document, monitor, and reassess risks continuously.</li>
-        <li>Risk Owners self-manage low risks and escalate moderate/high risks for tolerance decisions.</li>
+        <li>Enterprise IT Governance Board addresses escalated IT risks, issues, and corrective plans.</li>
+        <li>EITGB sets IT direction, priorities, and enterprise initiative alignment to NSF strategy.</li>
+        <li>Business Demand Governance Board evaluates risks tied to mission needs and valid demand.</li>
+        <li>BDGB decision authority is with CMO and CSO for business-priority alignment.</li>
+      </ul>
+    ),
+  },
+  {
+    title: "OCIO Risk Governance Lead Responsibilities",
+    variant: "default",
+    body: (
+      <ul>
+        <li>Maintains risk categories, definitions, scoring methods, and matrix guidance.</li>
+        <li>Owns centralized risk register oversight and risk dashboard/profile coordination.</li>
+        <li>Facilitates risk workshops and highlights cross-cutting enterprise risk trends.</li>
+        <li>Promotes risk-aware culture through templates, communication, and role training.</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Branch Chiefs and Risk Owners",
+    variant: "default",
+    body: (
+      <ul>
+        <li>Branch Chiefs are first escalation point for moderate and higher risks.</li>
+        <li>Branch Chiefs validate mitigation sufficiency and escalate high/critical with full context.</li>
+        <li>Risk Owners identify, assess, document, monitor, and update risks continuously.</li>
+        <li>Risk Owners self-manage low risks and elevate moderate/high for tolerance trade-offs.</li>
       </ul>
     ),
   },
@@ -100,14 +136,26 @@ export const sections: Section[] = [
     ),
   },
   {
-    title: "Risk Type Coverage",
+    title: "Risk Type Catalog",
     variant: "accent",
     body: (
       <ul>
-        <li>Includes budget, schedule, scope, quality, compliance, security, and operational risks.</li>
-        <li>Also includes fraud, financial, governance, policy, cultural, strategic, and vendor risks.</li>
-        <li>Some risk types are jointly overseen by BDGB and EITGB with a designated primary board.</li>
-        <li>Shared ownership clarifies when mission impacts require secondary board engagement.</li>
+        <li>Includes budget, schedule, scope, quality, personnel, and change management risks.</li>
+        <li>Includes compliance, security, operational, technology obsolescence, and data risks.</li>
+        <li>Includes governance, strategic, policy, reputational, fraud, and financial risks.</li>
+        <li>Includes vendor and third-party dependency risk for external delivery exposure.</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Shared Governing Body Logic",
+    variant: "default",
+    body: (
+      <ul>
+        <li>Compliance and security are primarily IT-governed, with BDGB engaged for mission impact.</li>
+        <li>Financial and reputational risks are primarily BDGB-governed due enterprise consequence.</li>
+        <li>Personnel and policy ownership depends on mission versus IT-specific impact profile.</li>
+        <li>Cross-board engagement is required when risk affects both mission execution and IT posture.</li>
       </ul>
     ),
   },
@@ -123,16 +171,62 @@ export const sections: Section[] = [
     ),
   },
   {
-    title: "Core Procedure Steps",
+    title: "Standard Procedure Step 1: Identify",
+    variant: "default",
+    body: (
+      <ul>
+        <li>Identify potential undesired outcomes and opportunities using structured methods.</li>
+        <li>Use audits, threat intelligence, vulnerability scans, and threat modeling.</li>
+        <li>Review prior incidents for recurrence patterns and latent systemic weaknesses.</li>
+        <li>Capture cyber, hardware, software, and skills-gap threats at early stages.</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Standard Procedure Step 2: Assess",
+    variant: "default",
+    body: (
+      <ul>
+        <li>Analyze causes, sources, likelihood, and positive or negative consequences.</li>
+        <li>Categorize by type using Appendix A risk-type guidance.</li>
+        <li>Determine probability with Appendix B and impact with Appendix C scales.</li>
+        <li>Use assessment outputs to inform risk appetite and response options.</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Standard Procedure Steps 3-4: Prioritize and Respond",
+    variant: "default",
+    body: (
+      <ul>
+        <li>Rank risk severity using Appendix D risk values and heat map analysis.</li>
+        <li>Focus on threats causing downtime, data breaches, or compliance violations.</li>
+        <li>Choose strategy: Mitigate, Avoid, Transfer, or Accept based on tolerance.</li>
+        <li>Document selected strategy with rationale, owners, and expected outcomes.</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Standard Procedure Steps 5-6: Implement and Monitor",
     variant: "default",
     body: (
       <ul className="stacked">
-        <li>Identify potential risks using audits, threat intelligence, tooling, and incident history.</li>
-        <li>Assess by risk type, probability, and impact using standardized appendices.</li>
-        <li>Prioritize via risk value and heat map to focus on highest exposure.</li>
-        <li>Develop response options: Mitigate, Avoid, Transfer, or Accept.</li>
-        <li>Implement with accountable owners and timelines.</li>
-        <li>Monitor continuously using automated controls, analytics, and dashboards.</li>
+        <li>Execute updates, training, controls, and contingency measures by timeline.</li>
+        <li>Assign clear responsibility and track action progress to completion.</li>
+        <li>Monitor using intrusion detection, log analysis, cloud metrics, and anomaly alerts.</li>
+        <li>Reassess controls regularly and update risk posture for emerging threats.</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Sample Monitoring Measures in Framework",
+    variant: "accent",
+    body: (
+      <ul>
+        <li>Security vulnerability alerts and automated patching workflows.</li>
+        <li>Operational monitoring with CloudWatch, AppDynamics, and AWS Config.</li>
+        <li>User behavior analytics and anomaly detection through SIEM tooling.</li>
+        <li>Disaster recovery readiness, Zero Trust controls, and AI-enabled risk analytics.</li>
       </ul>
     ),
   },
@@ -160,6 +254,18 @@ export const sections: Section[] = [
     ),
   },
   {
+    title: "Register Quality Standards",
+    variant: "default",
+    body: (
+      <ul>
+        <li>Risk statements must clearly explain what might happen and why it matters.</li>
+        <li>Mitigation should define proactive controls, not generic intent.</li>
+        <li>Closure requires evidence of response completion and lessons learned.</li>
+        <li>Documentation should support transparency, auditability, and cross-team comparability.</li>
+      </ul>
+    ),
+  },
+  {
     title: "Section 6: Communication and Escalation",
     label: "Escalation",
     variant: "break",
@@ -183,6 +289,18 @@ export const sections: Section[] = [
     ),
   },
   {
+    title: "Escalation Channels by Value",
+    variant: "default",
+    body: (
+      <ul>
+        <li>Low: internal team forums and portfolio-level review cadence.</li>
+        <li>Medium: Branch Chief meetings plus daily OCIO 9am dashboard reviews.</li>
+        <li>High: senior staff governance meetings and urgent executive briefings.</li>
+        <li>Critical external impact: ELT engagement and potential external reporting requirements.</li>
+      </ul>
+    ),
+  },
+  {
     title: "Section 7: Required ERM Training",
     label: "Training",
     variant: "accent",
@@ -194,6 +312,18 @@ export const sections: Section[] = [
         <li>Section 4: Developing Action and Mitigation Plans.</li>
         <li>Section 5: Proactive Risk Mitigation through Controls.</li>
         <li>Section 6: Monitoring, Reporting, and Continuous Improvement.</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Training Outcomes",
+    variant: "default",
+    body: (
+      <ul>
+        <li>Improved decision-making through structured risk analysis and governance alignment.</li>
+        <li>Higher operational efficiency through consistent controls and monitoring behavior.</li>
+        <li>Reduced cost of incidents through earlier detection and preventive mitigation.</li>
+        <li>Stronger compliance posture through standardized evidence and reporting discipline.</li>
       </ul>
     ),
   },
@@ -221,6 +351,30 @@ export const sections: Section[] = [
     ),
   },
   {
+    title: "Enterprise Risk Dashboard Detail",
+    variant: "default",
+    body: (
+      <ul>
+        <li>Displays risk levels, categories, ratings, heat map, incident summary, and status.</li>
+        <li>Supports prioritization of mitigations and review of response/resolution progress.</li>
+        <li>Enables trend analysis for emerging risk, post-incident action, and prevention.</li>
+        <li>Drives recurring review conversations across owners, leads, and Branch Chiefs.</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Enterprise Risk Profile Detail",
+    variant: "default",
+    body: (
+      <ul>
+        <li>Portfolio-level view of the most significant risks from the risk register.</li>
+        <li>At minimum includes all risks currently rated High.</li>
+        <li>Used by CIO for tolerance decisions and response-plan approval.</li>
+        <li>Provides executive risk visibility for strategic prioritization.</li>
+      </ul>
+    ),
+  },
+  {
     title: "Appendices A-G Highlights",
     label: "Appendix",
     variant: "break",
@@ -232,28 +386,50 @@ export const sections: Section[] = [
     ),
   },
   {
-    title: "Appendix Summary for Practitioners",
+    title: "Appendix A: Risk Types and Triggers",
     variant: "default",
     body: (
       <ul>
-        <li>Appendix A: risk types and example triggers.</li>
-        <li>Appendix B/C: probability and impact guidelines by risk domain.</li>
-        <li>Appendix D: sample risk value matrix.</li>
-        <li>Appendix E/F: sample heat map and dashboard model.</li>
-        <li>Appendix G: control category checklist for monitoring and mitigation.</li>
+        <li>Documents each risk type with sample trigger conditions for early warning.</li>
+        <li>Examples include scope creep, unpatched systems, policy gaps, and key-person departures.</li>
+        <li>Supports faster identification by linking risk classes to observable indicators.</li>
+        <li>Improves consistency of risk entry quality across teams.</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Appendix B/C: Probability and Impact",
+    variant: "default",
+    body: (
+      <ul>
+        <li>Probability levels run from Absolute to Low with complexity-based guidance.</li>
+        <li>Impact levels quantify severity by risk domain across mission, finance, and operations.</li>
+        <li>Assessment expectations include evidence of dependencies and testing maturity.</li>
+        <li>These appendices are the baseline for objective and repeatable ranking.</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Appendix D/E/F/G Practitioner Summary",
+    variant: "default",
+    body: (
+      <ul>
+        <li>Appendix D provides sample risk-value matrix to standardize severity ranking.</li>
+        <li>Appendix E/F provide sample heat map and dashboard reference artifacts.</li>
+        <li>Appendix G defines control categories: security, network, endpoint, data, and DevOps.</li>
+        <li>Control checklist maps monitoring activities to concrete operational safeguards.</li>
       </ul>
     ),
   },
   {
     title: "Closeout",
-    label: "Improve",
     variant: "dark",
     body: (
       <ul>
-        <li>Use this section version as the baseline for OCIO-wide risk role training.</li>
-        <li>Apply standardized procedures and appendices consistently across branches.</li>
-        <li>Keep register quality high and escalation timely to improve resilience.</li>
-        <li>Update annually as policy, technology, and governance conditions evolve.</li>
+        <li>Use this detailed section version as baseline curriculum for OCIO risk roles.</li>
+        <li>Operationalize consistent assessment, escalation, and reporting practices.</li>
+        <li>Leverage appendices actively, not passively, during risk reviews and planning.</li>
+        <li>Refresh content periodically as governance, threats, and mission demands evolve.</li>
       </ul>
     ),
   },
