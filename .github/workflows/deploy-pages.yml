@@ -1,0 +1,305 @@
+# Deploy configured presentations to GitHub Pages.
+# Main branch -> production paths. Other branches -> /preview/<branch-slug>/<name>/
+# Configure which presentations deploy in deploy-config.yml.
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    paths-ignore:
+      - "*.md"
+      - "LICENSE"
+      - ".gitignore"
+      - "archive/**"
+  workflow_dispatch:
+    inputs:
+      presentation:
+        description: "Optional: deploy only this presentation (directory name)"
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set.outputs.matrix }}
+      has_work: ${{ steps.set.outputs.has_work }}
+      deploy_prefix: ${{ steps.set.outputs.deploy_prefix }}
+      base_url: ${{ steps.set.outputs.base_url }}
+      base_path_suffix: ${{ steps.set.outputs.base_path_suffix }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set deployment matrix and prefix
+        id: set
+        env:
+          WORKFLOW_INPUT_PRESENTATION: ${{ github.event.inputs.presentation }}
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq python3-pip > /dev/null
+          pip install pyyaml --quiet
+
+          BASE_URL=$(python3 -c "import yaml, os; c=yaml.safe_load(open('deploy-config.yml')); print(c.get('base_url', '/' + os.environ.get('GITHUB_REPOSITORY', 'org/repo')))")
+          echo "base_url=$BASE_URL" >> $GITHUB_OUTPUT
+          echo "base_url=$BASE_URL" >> $GITHUB_ENV
+
+          # Build list of presentations with deploy: true and their config
+          python3 << 'PY'
+          import yaml
+          import json
+          import os
+
+          with open('deploy-config.yml') as f:
+            config = yaml.safe_load(f)
+
+          presentations = config.get('presentations', {})
+          deployable = []
+          for name, cfg in presentations.items():
+            if not cfg.get('deploy'):
+              continue
+            entry = {"name": name, "type": cfg.get("type", "react")}
+            if cfg.get("path"):
+              entry["path"] = cfg.get("path")
+            if entry["type"] == "react":
+              entry["package_manager"] = cfg.get("package_manager", "npm")
+              entry["node_version"] = str(cfg.get("node_version", "20"))
+            else:
+              entry["entry"] = cfg.get("entry", "index.html")
+            deployable.append(entry)
+
+          # On workflow_dispatch with no input, deploy all deployable
+          # On workflow_dispatch with presentation input, deploy only that one (if in deployable)
+          # On push, deploy only deployable presentations that have file changes
+          manual_presentation = (os.environ.get("WORKFLOW_INPUT_PRESENTATION") or "").strip()
+          if manual_presentation:
+            deployable = [e for e in deployable if e["name"] == manual_presentation]
+          elif os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch":
+            pass  # keep all deployable
+          else:
+            # Push: find changed presentation dirs
+            before = os.environ.get("GITHUB_EVENT_BEFORE", "HEAD^")
+            sha = os.environ.get("GITHUB_SHA", "HEAD")
+            import subprocess
+            try:
+              out = subprocess.run(
+                ["git", "diff", "--name-only", before, sha],
+                capture_output=True, text=True, check=False, timeout=5
+              )
+              changed = (out.stdout or "").strip().splitlines()
+            except Exception:
+              changed = []
+            config_changed = "deploy-config.yml" in changed
+            if not config_changed:
+              def pres_changed(entry, changed_files):
+                prefix = entry.get("path", entry["name"]).rstrip("/") + "/"
+                return any(f.startswith(prefix) for f in changed_files)
+              deployable = [e for e in deployable if pres_changed(e, changed)]
+
+          # Log summary for workflow UI
+          event = os.environ.get("GITHUB_EVENT_NAME", "")
+          if manual_presentation:
+            print("## Trigger: workflow_dispatch (single presentation)")
+            print("## Presentation:", manual_presentation)
+          elif event == "workflow_dispatch":
+            print("## Trigger: workflow_dispatch (all deployable)")
+          else:
+            print("## Trigger: push")
+            print("## Changed files:", changed if changed else "(none)")
+            if config_changed:
+              print("## deploy-config.yml changed: building all deployable")
+          if deployable:
+            print("## Deploying", len(deployable), "presentation(s):", ", ".join(e["name"] for e in deployable))
+            base = config.get("base_url", "/" + os.environ.get("GITHUB_REPOSITORY", "org/repo")).rstrip("/")
+            ref = os.environ.get("GITHUB_REF_NAME", "main")
+            if ref == "main":
+              path_prefix = base
+            else:
+              slug = ref.replace("/", "-").replace(" ", "-")[:50].strip("-")
+              path_prefix = f"{base}/preview/{slug}"
+            for e in deployable:
+              url_path = f"{path_prefix}/{e['name']}/"
+              print("##", e["name"], "→", url_path)
+            print("## Index:", base + "/")
+          else:
+            print("## No presentations to build (matrix is empty).")
+
+          matrix = {"include": deployable}
+          with open(os.environ.get("GITHUB_OUTPUT", ""), "a") as f:
+            f.write("matrix<<MATRIXEOF\n")
+            f.write(json.dumps(matrix))
+            f.write("\nMATRIXEOF\n")
+            f.write(f"has_work={'true' if deployable else 'false'}\n")
+          PY
+
+          # Deploy prefix: main -> "", other branches -> preview/<branch-slug>
+          # base_path_suffix: "" for main, "preview/<slug>/" for branches (avoids double slash in VITE_BASE_PATH)
+          branch="${{ github.ref_name }}"
+          if [ "$branch" = "main" ]; then
+            echo "deploy_prefix=" >> $GITHUB_OUTPUT
+            echo "base_path_suffix=" >> $GITHUB_OUTPUT
+            echo "## Branch: $branch → production (root paths)"
+          else
+            slug=$(echo "$branch" | sed 's/[^a-zA-Z0-9._-]/-/g' | sed 's/-\+/-/g' | sed 's/^-//' | sed 's/-$//' | cut -c1-50)
+            echo "deploy_prefix=preview/$slug" >> $GITHUB_OUTPUT
+            echo "base_path_suffix=preview/$slug/" >> $GITHUB_OUTPUT
+            echo "## Branch: $branch → preview at /preview/$slug/"
+          fi
+
+  build:
+    needs: prepare
+    if: needs.prepare.outputs.has_work == 'true'
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.prepare.outputs.matrix) }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log presentation
+        run: 'echo "## Building presentation: ${{ matrix.name }} (${{ matrix.type }})"'
+
+      - uses: actions/checkout@v4
+
+      - name: Setup Node (npm)
+        if: matrix.type == 'react' && matrix.package_manager == 'npm'
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node_version }}
+
+      - name: Build React presentation
+        if: matrix.type == 'react'
+        env:
+          VITE_BASE_PATH: ${{ format('{0}/{1}{2}/', needs.prepare.outputs.base_url, needs.prepare.outputs.base_path_suffix, matrix.name) }}
+        run: |
+          PRES_DIR="${{ matrix.path }}"
+          [ -z "$PRES_DIR" ] && PRES_DIR="${{ matrix.name }}"
+          if [ "${{ matrix.package_manager }}" = "bun" ]; then
+            curl -fsSL https://bun.sh/install | bash
+            export BUN_INSTALL="$HOME/.bun"
+            export PATH="$HOME/.bun/bin:$PATH"
+          fi
+          cd "$PRES_DIR"
+          if [ "${{ matrix.package_manager }}" = "npm" ]; then
+            npm install
+          else
+            bun install --frozen-lockfile
+          fi
+          if [ "${{ matrix.package_manager }}" = "npm" ]; then
+            npm run build
+          else
+            bun run build
+          fi
+          mkdir -p "$OLDPWD/build-output"
+          cp -r dist/* "$OLDPWD/build-output/"
+        continue-on-error: false
+
+      - name: Stage static presentation
+        if: matrix.type == 'static'
+        run: |
+          PRES_DIR="${{ matrix.path }}"
+          [ -z "$PRES_DIR" ] && PRES_DIR="${{ matrix.name }}"
+          mkdir -p build-output
+          cp "$PRES_DIR/${{ matrix.entry }}" build-output/index.html
+          if [ -d "$PRES_DIR/scripts" ]; then
+            cp -r "$PRES_DIR/scripts" build-output/ 2>/dev/null || true
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-${{ matrix.name }}
+          path: build-output
+
+  deploy:
+    needs: [prepare, build]
+    if: always() && needs.prepare.outputs.has_work == 'true' && needs.build.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v3
+        with:
+          path: artifacts
+
+      - name: Assemble staging directory
+        run: |
+          PREFIX="${{ needs.prepare.outputs.deploy_prefix }}"
+          mkdir -p staging
+          for dir in artifacts/build-*/; do
+            name=$(basename "$dir" | sed 's/^build-//')
+            if [ -n "$PREFIX" ]; then
+              slug="${PREFIX#preview/}"
+              mkdir -p "staging/preview/$slug"
+              cp -r "$dir" "staging/preview/$slug/$name"
+            else
+              cp -r "$dir" "staging/$name"
+            fi
+          done
+          ls -laR staging
+
+      - name: Generate root index.html
+        run: |
+          BASE_URL="${{ needs.prepare.outputs.base_url }}"
+          PREFIX="${{ needs.prepare.outputs.deploy_prefix }}"
+          cat > staging/index.html << 'INDEX'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Presentations</title>
+            <style>
+              body { font-family: system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }
+              h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+              ul { list-style: none; padding: 0; }
+              li { margin: 0.5rem 0; }
+              a { color: #00A5B5; text-decoration: none; }
+              a:hover { text-decoration: underline; }
+              .preview { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e0e2e6; font-size: 0.9rem; color: #4b5563; }
+            </style>
+          </head>
+          <body>
+            <h1>Presentations</h1>
+            <ul>
+          INDEX
+          for dir in staging/*/; do
+            name=$(basename "$dir")
+            if [ "$name" != "preview" ]; then
+              label=$(echo "$name" | sed 's/-/ /g')
+              echo "              <li><a href=\"./${name}/\">${label}</a></li>" >> staging/index.html
+            fi
+          done
+          if [ -d "staging/preview" ]; then
+            cat >> staging/index.html << 'PREVIEW'
+            </ul>
+            <section class="preview">
+              <h2>Preview deployments</h2>
+              <ul>
+          PREVIEW
+            for slugdir in staging/preview/*/; do
+              slug=$(basename "$slugdir")
+              echo "                <li><a href=\"./preview/${slug}/\">${slug}</a></li>" >> staging/index.html
+            done
+            echo "              </ul>" >> staging/index.html
+            echo "            </section>" >> staging/index.html
+          else
+            echo "            </ul>" >> staging/index.html
+          fi
+          cat >> staging/index.html << 'FOOT'
+          </body>
+          </html>
+          FOOT
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: staging
+          destination_dir: .
+          keep_files: true
+
+      - name: Deployment summary
+        run: |
+          echo "## Content pushed to branch: gh-pages"
+          echo "## If the site is blank, set Settings → Pages → Source to branch 'gh-pages', folder '/ (root)'"
+          echo "## Index: ${{ needs.prepare.outputs.base_url }}/"

@@ -1,0 +1,9 @@
+base_url: "/risk-management-training"
+
+presentations:
+  enterprise-risk-management-training:
+    type: react
+    path: enterprise-risk-management-training-react
+    deploy: true
+    package_manager: npm
+    node_version: 20
