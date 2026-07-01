@@ -1,0 +1,62 @@
+<!-- TEMPLATE: quad-grid-slide
+     Theme options: light (default), dark
+     Use for: 4-part framework, numbered components, 2×2 relationships,
+              "what / why / how / when" (alternative to faq-grid with numbers),
+              capture strategy pillars, solution components
+
+     PLACEHOLDER GUIDE:
+       {{THEME}}              -> light | dark
+       {{SLIDE_NUM}}          -> integer
+       {{LABEL}}              -> eyebrow / section tag
+       {{TITLE}}              -> slide headline (h2)
+       {{ITEM_1_NUM}}         -> number badge, e.g. "01" or "1"
+       {{ITEM_1_HEADING}}     -> item title (h3 or h4)
+       {{ITEM_1_BODY}}        -> description — short paragraph or <ul><li> list
+       {{ITEM_2_NUM}}         -> repeat for each quadrant (top-right)
+       {{ITEM_2_HEADING}}
+       {{ITEM_2_BODY}}
+       {{ITEM_3_NUM}}         -> bottom-left
+       {{ITEM_3_HEADING}}
+       {{ITEM_3_BODY}}
+       {{ITEM_4_NUM}}         -> bottom-right
+       {{ITEM_4_HEADING}}
+       {{ITEM_4_BODY}}
+       {{CLASSIFICATION}}     -> classification class + label, e.g.:
+                                class="footer-classification entrusted">Entrusted
+                                or empty string if Non-Sensitive / None
+
+     NOTE: Layout is a fixed 2×2 grid. For numbered components without a label,
+           omit the <h3> and use only the number + body. For relationship diagrams
+           (slide 42 pattern) replace {{ITEM_N_NUM}} with a short category tag instead.
+-->
+<div class="slide {{THEME}}" data-slide="{{SLIDE_NUM}}">
+  <div class="label">{{LABEL}}</div>
+  <h2>{{TITLE}}</h2>
+  <div class="quad-grid">
+    <div class="quad-item">
+      <div class="quad-number">{{ITEM_1_NUM}}</div>
+      <h3>{{ITEM_1_HEADING}}</h3>
+      {{ITEM_1_BODY}}
+    </div>
+    <div class="quad-item">
+      <div class="quad-number">{{ITEM_2_NUM}}</div>
+      <h3>{{ITEM_2_HEADING}}</h3>
+      {{ITEM_2_BODY}}
+    </div>
+    <div class="quad-item">
+      <div class="quad-number">{{ITEM_3_NUM}}</div>
+      <h3>{{ITEM_3_HEADING}}</h3>
+      {{ITEM_3_BODY}}
+    </div>
+    <div class="quad-item">
+      <div class="quad-number">{{ITEM_4_NUM}}</div>
+      <h3>{{ITEM_4_HEADING}}</h3>
+      {{ITEM_4_BODY}}
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span {{CLASSIFICATION}}</span>
+    <span class="footer-center">boozallen.com &nbsp;&middot;&nbsp; &copy; 2026 Booz Allen Hamilton, Inc.</span>
+    <div class="slide-number"></div>
+  </div>
+</div>

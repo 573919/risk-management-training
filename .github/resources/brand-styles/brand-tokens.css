@@ -1,0 +1,1074 @@
+/* ============================================
+   BRAND TOKENS — CivilTech / Booz Allen Hamilton
+   Source of truth for all presentation styling.
+   Reference this file when generating HTML slide decks.
+   ============================================ */
+
+/* ---- Google Fonts import ---- */
+/* Include this <link> block in the <head> of generated decks:
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+*/
+
+:root {
+  /* ---- Primary palette ---- */
+  --electric-teal: #23D2D7;   /* Accent on dark backgrounds */
+  --black: #000000;
+  --white: #FFFFFF;
+  --dark-bg: #0d1117;         /* Soft dark blue-gray for dark slide backgrounds */
+
+  /* ---- Secondary palette ---- */
+  --electric-green: #BAD63A;
+  --electric-fuchsia: #E55ED6;
+  --teal: #00A5B5;             /* Accent on light backgrounds */
+
+  /* ---- Derived / utility ---- */
+  --teal-light: rgba(0, 165, 181, 0.08);
+  --teal-border: rgba(0, 165, 181, 0.25);
+  --gray-50:  #f8f9fa;
+  --gray-100: #f0f1f3;
+  --gray-200: #e0e2e6;
+  --gray-400: #9ca3af;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+
+  /* ---- Typography ---- */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif:   'Source Serif 4', 'Georgia', serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* ---- Chrome heights ---- */
+  --breadcrumb-h: 38px;
+  --footer-h: 44px;
+}
+
+/* ============================================
+   SLIDE THEMES
+   Apply one class to each .slide element.
+   ============================================ */
+
+/* Light (default) — white background */
+.slide.light {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* Dark — soft dark blue-gray background */
+.slide.dark {
+  background: var(--dark-bg);
+  color: var(--white);
+}
+
+/* Teal Hero — use for title slides and key section dividers */
+.slide.teal-hero {
+  background: var(--teal);
+  color: var(--white);
+}
+
+/* ============================================
+   LAYOUT CONSTANTS
+   ============================================ */
+/*
+  Standard slide dimensions: 1280 × 720 px (16:9)
+  Standard padding:          60px top/bottom, 100px left/right
+  Content max-width:         1080px (fits within standard padding)
+  Slide footer height:       40px (reserved at bottom)
+  BAH brand-mark:            bottom-right, 12px font, 0.25 opacity on dark
+*/
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   SLIDE ENGINE LAYOUT
+   ============================================ */
+.deck {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 100px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+  overflow: hidden;
+}
+
+.slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ============================================
+   TYPOGRAPHY SCALE
+   ============================================ */
+.slide h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6em;
+}
+
+.slide h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.5em;
+}
+
+.slide h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.4em;
+}
+
+.slide h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.3em;
+}
+
+.slide p {
+  font-size: 1.2rem;
+  line-height: 1.65;
+  max-width: 52em;
+}
+
+.slide .subtitle {
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+.slide .label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+.dark .label    { color: var(--electric-teal); }
+.light .label   { color: var(--teal); }
+.teal-hero .label { color: rgba(255,255,255,0.75); }
+
+.slide .big-number {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.dark .big-number  { color: var(--electric-teal); }
+.light .big-number { color: var(--teal); }
+
+/* ---- Gradient titles ---- */
+.light h2,
+.light h1 {
+  background: linear-gradient(135deg, var(--gray-800) 45%, var(--teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark h2,
+.dark h1 {
+  background: linear-gradient(135deg, var(--white) 0%, var(--electric-teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.teal-hero h1,
+.teal-hero h2 {
+  -webkit-text-fill-color: var(--white);
+}
+
+/* ============================================
+   BULLET LISTS
+   ============================================ */
+.slide ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.4em 0;
+}
+
+.slide ul li {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding-left: 1.6em;
+  position: relative;
+  margin-bottom: 0.5em;
+}
+
+.slide ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dark ul li::before      { background: var(--electric-teal); }
+.light ul li::before     { background: var(--teal); }
+.teal-hero ul li::before { background: var(--white); }
+
+/* ============================================
+   QUOTE BLOCK
+   ============================================ */
+.quote-block {
+  border-left: 4px solid;
+  padding: 0.3em 0 0.3em 1.4em;
+  margin: 0.5em 0 1em;
+  max-width: 42em;
+}
+
+.dark .quote-block      { border-color: var(--electric-teal); }
+.light .quote-block     { border-color: var(--teal); }
+.teal-hero .quote-block { border-color: rgba(255,255,255,0.5); }
+
+.quote-block .quote-text {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.quote-block .quote-attr {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.7;
+  margin-top: 0.6em;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+.slide table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.8em 0;
+  font-size: 1.05rem;
+}
+
+.slide th, .slide td {
+  text-align: left;
+  padding: 0.7em 1em;
+  vertical-align: top;
+}
+
+.slide th {
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 2px solid;
+}
+
+.light th   { border-color: var(--teal);          color: var(--teal); }
+.dark th    { border-color: var(--electric-teal);  color: var(--electric-teal); }
+
+.slide td { border-bottom: 1px solid; }
+.light td { border-color: var(--gray-200); }
+.dark td  { border-color: rgba(255,255,255,0.1); }
+
+/* ============================================
+   TWO-COLUMN LAYOUT
+   ============================================ */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 0.8em;
+}
+
+.col-divider {
+  border-right: 1px solid var(--gray-200);
+  padding-right: 40px;
+}
+
+/* ============================================
+   PILLAR / CARD GRID (3-up)
+   ============================================ */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 1em;
+}
+
+.pillar-card {
+  border-radius: 12px;
+  padding: 28px 24px;
+  border: 1px solid var(--teal-border);
+  background: var(--teal-light);
+}
+
+.pillar-card h3 { font-size: 1.2rem; margin-bottom: 0.35em; }
+.pillar-card p  { font-size: 1rem; line-height: 1.55; color: var(--gray-700); }
+
+/* ============================================
+   METRICS GRID
+   ============================================ */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 0.8em;
+}
+
+.metric-card {
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.dark .metric-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.metric-card .metric-value {
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.dark .metric-value { color: var(--electric-teal); }
+
+/* ============================================
+   FAQ GRID (2×2)
+   ============================================ */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 14px;
+  flex: 1;
+}
+
+.faq-item {
+  border-radius: 10px;
+  padding: 18px 20px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+}
+
+.faq-item .faq-q {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: 8px;
+}
+
+.faq-item .faq-a {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--gray-700);
+}
+
+/* ============================================
+   SLIDE CHROME (footer, slide-number)
+   ============================================ */
+.slide-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  border-top: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.light .slide-footer     { border-color: var(--gray-200); }
+.dark .slide-footer      { border-color: rgba(255,255,255,0.1); }
+.teal-hero .slide-footer { border-color: rgba(255,255,255,0.25); }
+
+/* Footer zones */
+.footer-classification {
+  min-width: 80px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer-classification:not(:empty) {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 3px;
+  border: 1px solid currentColor;
+}
+
+.footer-classification.entrusted  { color: var(--electric-green); }
+.footer-classification.internal   { color: var(--teal); }
+.footer-classification.restricted { color: var(--electric-fuchsia); }
+.dark .footer-classification.internal { color: var(--electric-teal); }
+
+.footer-center {
+  letter-spacing: 0.04em;
+}
+
+.light .footer-center     { color: var(--gray-600); }
+.dark .footer-center      { color: rgba(255,255,255,0.45); }
+.teal-hero .footer-center { color: rgba(255,255,255,0.65); }
+
+.slide-number {
+  min-width: 80px;
+  text-align: right;
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.4;
+}
+
+/* ============================================
+   BAH HEADER (for single-slide / infographic format)
+   Use when the deck represents a single exported slide.
+   ============================================ */
+.bah-header {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  height: 54px;
+  border-bottom: 1px solid var(--gray-200);
+  flex-shrink: 0;
+}
+
+.bah-logo {
+  height: 24px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+.bah-logo img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+/* Logo color context (applied by generation skills):
+   .light .bah-logo, .teal-hero .bah-logo  ->  Black wordmark SVG
+   .dark .bah-logo                          ->  Electric Teal wordmark SVG (or White)
+*/
+
+.bah-label {
+  margin-left: 16px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+/* ============================================
+   TITLE RULE (decorative underline)
+   ============================================ */
+.title-rule {
+  height: 3px;
+  width: 72px;
+  background: var(--teal);
+  border-radius: 2px;
+  margin: 10px 0 20px;
+}
+
+.dark .title-rule      { background: var(--electric-teal); }
+.teal-hero .title-rule { background: rgba(255,255,255,0.6); }
+
+/* ============================================
+   STATS GRID (3-metric big-number slide)
+   ============================================ */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 1em;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 28px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--teal-border);
+  background: var(--teal-light);
+}
+
+.dark .stat-card {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.75;
+  margin-top: 0.4em;
+  line-height: 1.3;
+}
+
+.stat-context {
+  font-size: 0.85rem;
+  opacity: 0.55;
+  margin-top: 0.25em;
+}
+
+/* ============================================
+   TIMELINE (horizontal phased)
+   ============================================ */
+.timeline-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 12px;
+  margin-top: 1.5em;
+  flex: 1;
+}
+
+.timeline-phase {
+  padding: 20px 24px;
+  border-radius: 10px;
+  border: 1px solid var(--teal-border);
+  background: var(--teal-light);
+  position: relative;
+}
+
+.dark .timeline-phase {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.timeline-phase-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+.light .timeline-phase-label { color: var(--teal); }
+.dark  .timeline-phase-label { color: var(--electric-teal); }
+
+/* ============================================
+   MATURITY MODEL (4-column progression)
+   ============================================ */
+.maturity-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 1em;
+  flex: 1;
+}
+
+.maturity-level {
+  border-radius: 10px;
+  padding: 20px 18px;
+  border: 1px solid var(--teal-border);
+  background: var(--teal-light);
+}
+
+.dark .maturity-level {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.maturity-tier {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+.light .maturity-tier { color: var(--teal); }
+.dark  .maturity-tier { color: var(--electric-teal); }
+
+/* ============================================
+   FEATURES GRID (3-up icon+title+text cards)
+   ============================================ */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 1em;
+}
+
+.feature-grid.two-up   { grid-template-columns: repeat(2, 1fr); }
+.feature-grid.four-up  { grid-template-columns: repeat(4, 1fr); }
+
+.feature-card {
+  border-radius: 12px;
+  padding: 24px 20px;
+  border: 1px solid var(--teal-border);
+  background: var(--teal-light);
+}
+
+.dark .feature-card {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.light .icon-circle { border-color: var(--teal); color: var(--teal); }
+.dark  .icon-circle { border-color: var(--electric-teal); color: var(--electric-teal); }
+
+/* ============================================
+   PROCESS STEPS (numbered horizontal steps)
+   ============================================ */
+.step-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 20px;
+  margin-top: 1.2em;
+  flex: 1;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--teal-border);
+  background: var(--teal-light);
+}
+
+.dark .step-item {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.step-number {
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.light .step-number { color: var(--teal); }
+.dark  .step-number { color: var(--electric-teal); }
+
+.step-keyword {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ============================================
+   QUAD GRID (2×2 numbered components)
+   ============================================ */
+.quad-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  flex: 1;
+  margin-top: 0.8em;
+}
+
+.quad-item {
+  border-radius: 10px;
+  padding: 22px 24px;
+  border: 1px solid var(--teal-border);
+  background: var(--teal-light);
+}
+
+.dark .quad-item {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.quad-number {
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.light .quad-number { color: var(--teal); }
+.dark  .quad-number { color: var(--electric-teal); }
+
+/* ============================================
+   PLACEMAT MODE
+   Per-slide modifier: .slide.placemat
+   Overrides presenter typography scale and padding
+   for dense, self-contained reference material.
+   ============================================ */
+.slide.placemat {
+  padding: 28px 48px;
+  justify-content: flex-start;
+  font-size: 0.82rem;
+}
+
+.placemat h1 { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.25em; line-height: 1.15; }
+.placemat h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25em; line-height: 1.2; }
+.placemat h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.2em; line-height: 1.3; }
+.placemat h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.15em; }
+.placemat p  { font-size: 0.82rem; line-height: 1.55; max-width: none; margin-bottom: 0.5em; }
+.placemat ul { margin: 0.25em 0; }
+.placemat ul li { font-size: 0.82rem; line-height: 1.5; margin-bottom: 0.3em; }
+.placemat .label   { font-size: 0.62rem; margin-bottom: 0.35em; }
+.placemat .subtitle { font-size: 1rem; }
+
+.placemat .breadcrumb {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  opacity: 0.55;
+  margin-bottom: 0.5em;
+  text-transform: none;
+}
+
+/* ============================================
+   PLACEMAT BODY + SIDEBAR LAYOUT
+   ============================================ */
+.placemat-layout {
+  display: grid;
+  grid-template-columns: 3fr 1.6fr;
+  gap: 32px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.placemat-body {
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.placemat-sidebar {
+  border-left: 1px solid var(--teal-border);
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.dark .placemat-sidebar { border-color: rgba(255,255,255,0.1); }
+
+.sidebar-section-title {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.light .sidebar-section-title { color: var(--teal); }
+.dark  .sidebar-section-title { color: var(--electric-teal); }
+
+.sidebar-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-link-list li {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  padding-left: 0;
+  margin-bottom: 0.2em;
+}
+
+.sidebar-link-list li::before { display: none; }
+
+/* ============================================
+   PLACEMAT SOLUTIONS GRID
+   Variable columns via --sol-cols (default 3, max 5)
+   Usage: <div class="solutions-grid" style="--sol-cols: 4">
+   ============================================ */
+.solutions-grid {
+  display: grid;
+  grid-template-columns: 120px repeat(var(--sol-cols, 3), 1fr);
+  gap: 0;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  border: 1px solid var(--teal-border);
+  border-radius: 8px;
+  margin-top: 0.6em;
+}
+
+.solutions-col-header {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 8px 10px;
+  background: var(--teal-light);
+  border-bottom: 2px solid var(--teal-border);
+  border-right: 1px solid var(--teal-border);
+}
+
+.dark .solutions-col-header {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.12);
+}
+
+.solutions-col-header.row-label-header {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: transparent;
+}
+
+.solutions-row-label {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 10px;
+  border-top: 1px solid var(--teal-border);
+  border-right: 2px solid var(--teal-border);
+  display: flex;
+  align-items: flex-start;
+}
+
+.light .solutions-row-label { color: var(--teal); }
+.dark  .solutions-row-label { color: var(--electric-teal); }
+
+.solutions-cell {
+  font-size: 0.75rem;
+  line-height: 1.45;
+  padding: 8px 10px;
+  border-top: 1px solid var(--teal-border);
+  border-right: 1px solid var(--teal-border);
+  vertical-align: top;
+}
+
+.dark .solutions-cell   { border-color: rgba(255,255,255,0.08); }
+.dark .solutions-row-label { border-color: rgba(255,255,255,0.12); }
+
+/* ============================================
+   PLACEMAT WHY-BUILT GRID
+   ============================================ */
+.why-built-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 0.8em;
+}
+
+.why-built-reason {
+  border-radius: 8px;
+  padding: 14px 16px;
+  border: 1px solid var(--teal-border);
+  background: var(--teal-light);
+}
+
+.dark .why-built-reason {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.why-built-reason h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.35em;
+}
+
+.why-built-reason p {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+/* ============================================
+   BREADCRUMB NAV BAR
+   Fixed top bar with clickable section navigation.
+   ============================================ */
+.slide-breadcrumb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--breadcrumb-h);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0 2rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.slide-breadcrumb.chrome--light {
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.slide-breadcrumb.chrome--dark {
+  background: rgba(13, 17, 23, 0.82);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* BAH logo visibility — toggled by chrome class */
+.slide-breadcrumb .bah-logo-light { display: block; }
+.slide-breadcrumb .bah-logo-dark  { display: none; }
+.slide-breadcrumb.chrome--dark .bah-logo-light { display: none; }
+.slide-breadcrumb.chrome--dark .bah-logo-dark  { display: block; }
+
+.breadcrumb-nav-item {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.25s ease, font-weight 0.15s ease;
+}
+
+.chrome--light .breadcrumb-nav-item       { color: var(--gray-400); }
+.chrome--light .breadcrumb-nav-item:hover { color: var(--gray-600); }
+.chrome--light .breadcrumb-nav-item.active { color: var(--teal); font-weight: 700; }
+
+.chrome--dark .breadcrumb-nav-item       { color: rgba(255, 255, 255, 0.28); }
+.chrome--dark .breadcrumb-nav-item:hover { color: rgba(255, 255, 255, 0.5); }
+.chrome--dark .breadcrumb-nav-item.active { color: var(--electric-teal); font-weight: 700; }
+
+.breadcrumb-dot {
+  font-size: 0.7rem;
+  margin: 0 0.55rem;
+  user-select: none;
+  transition: color 0.25s ease;
+}
+
+.chrome--light .breadcrumb-dot { color: var(--gray-200); }
+.chrome--dark .breadcrumb-dot  { color: rgba(255, 255, 255, 0.1); }
+
+/* ============================================
+   FOOTER ENHANCEMENTS (logo + counter)
+   Extended three-zone footer for decks with chrome.
+   ============================================ */
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 80px;
+}
+
+.footer-logo {
+  height: 22px;
+  width: auto;
+  display: block;
+}
+
+.footer-logo-name {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.light .footer-logo-name     { color: rgba(0, 0, 0, 0.55); }
+.dark .footer-logo-name      { color: rgba(255, 255, 255, 0.55); }
+.teal-hero .footer-logo-name { color: rgba(255, 255, 255, 0.65); }
+
+.footer-counter {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  opacity: 0.55;
+}
+
+/* ============================================
+   PRINT / PDF EXPORT
+   Cmd+P / Ctrl+P -> "Save as PDF", Landscape, No margins.
+   All slides render sequentially with page breaks.
+   ============================================ */
+@media print {
+  html, body {
+    height: auto;
+    overflow: visible;
+  }
+
+  .deck {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+  .slide {
+    position: relative;
+    opacity: 1 !important;
+    pointer-events: auto;
+    display: flex !important;
+    width: 1280px;
+    height: 720px;
+    page-break-after: always;
+    break-after: page;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .slide.active {
+    /* No special treatment in print — all slides visible */
+  }
+
+  .slide.dark {
+    background: var(--dark-bg) !important;
+    color: var(--white) !important;
+  }
+
+  .slide.teal-hero {
+    background: var(--teal) !important;
+    color: var(--white) !important;
+  }
+
+  .nav-hint,
+  .slide-breadcrumb {
+    display: none !important;
+  }
+}

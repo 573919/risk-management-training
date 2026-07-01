@@ -1,0 +1,52 @@
+<!-- TEMPLATE: timeline-slide
+     Theme options: light (default), dark
+     Use for: phased approach, roadmap, schedule overview, journey map
+
+     PLACEHOLDER GUIDE:
+       {{THEME}}              -> light | dark
+       {{SLIDE_NUM}}          -> integer
+       {{LABEL}}              -> eyebrow / section tag
+       {{TITLE}}              -> slide headline (h2)
+       {{PHASE_1_LABEL}}      -> phase name/number, e.g. "Phase 1" or "Now"
+       {{PHASE_1_HEADING}}    -> short title for this phase
+       {{PHASE_1_BODY}}       -> 1–3 bullet points or short paragraph
+       {{PHASE_2_LABEL}}      -> repeat for each additional phase (up to 5 phases)
+       {{PHASE_2_HEADING}}
+       {{PHASE_2_BODY}}
+       {{PHASE_3_LABEL}}
+       {{PHASE_3_HEADING}}
+       {{PHASE_3_BODY}}
+       {{CLASSIFICATION}}     -> classification class + label, e.g.:
+                                class="footer-classification restricted">Restricted
+                                or empty string if Non-Sensitive / None
+
+     NOTE: For 3-phase timelines use 3 .timeline-phase blocks.
+           For 4–5 phases add blocks — the grid stretches automatically.
+           Keep {{PHASE_N_BODY}} to 2–3 bullets max per phase for readability.
+-->
+<div class="slide {{THEME}}" data-slide="{{SLIDE_NUM}}">
+  <div class="label">{{LABEL}}</div>
+  <h2>{{TITLE}}</h2>
+  <div class="timeline-track">
+    <div class="timeline-phase">
+      <div class="timeline-phase-label">{{PHASE_1_LABEL}}</div>
+      <h3>{{PHASE_1_HEADING}}</h3>
+      {{PHASE_1_BODY}}
+    </div>
+    <div class="timeline-phase">
+      <div class="timeline-phase-label">{{PHASE_2_LABEL}}</div>
+      <h3>{{PHASE_2_HEADING}}</h3>
+      {{PHASE_2_BODY}}
+    </div>
+    <div class="timeline-phase">
+      <div class="timeline-phase-label">{{PHASE_3_LABEL}}</div>
+      <h3>{{PHASE_3_HEADING}}</h3>
+      {{PHASE_3_BODY}}
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span {{CLASSIFICATION}}</span>
+    <span class="footer-center">boozallen.com &nbsp;&middot;&nbsp; &copy; 2026 Booz Allen Hamilton, Inc.</span>
+    <div class="slide-number"></div>
+  </div>
+</div>

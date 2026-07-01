@@ -1,0 +1,61 @@
+<!-- TEMPLATE: maturity-model-slide
+     Theme options: light (default), dark
+     Use for: maturity models, capability levels, progression frameworks
+
+     PLACEHOLDER GUIDE:
+       {{THEME}}              -> light | dark
+       {{SLIDE_NUM}}          -> integer
+       {{LABEL}}              -> eyebrow / section tag
+       {{TITLE}}              -> slide headline (h2)
+       {{LEVEL_1_TIER}}       -> tier label, e.g. "CRAWL" / "Level 1: Foundation"
+       {{LEVEL_1_HEADING}}    -> short descriptor heading
+       {{LEVEL_1_BODY}}       -> bullet list <ul><li>...</li></ul> or short paragraph
+       {{LEVEL_2_TIER}}       -> repeat for each level (typically 4 levels)
+       {{LEVEL_2_HEADING}}
+       {{LEVEL_2_BODY}}
+       {{LEVEL_3_TIER}}
+       {{LEVEL_3_HEADING}}
+       {{LEVEL_3_BODY}}
+       {{LEVEL_4_TIER}}
+       {{LEVEL_4_HEADING}}
+       {{LEVEL_4_BODY}}
+       {{CLASSIFICATION}}     -> classification class + label, e.g.:
+                                class="footer-classification entrusted">Entrusted
+                                or empty string if Non-Sensitive / None
+
+     NOTE: Standard 4-column layout. For 3-level models, remove one .maturity-level block
+           and add style="grid-template-columns: repeat(3, 1fr)" to .maturity-grid.
+           Tier labels typically use action verbs: CRAWL / WALK / RUN / FLY,
+           or FOUNDATION / REALIZATION / ALIGNMENT / OPTIMIZATION.
+-->
+<div class="slide {{THEME}}" data-slide="{{SLIDE_NUM}}">
+  <div class="label">{{LABEL}}</div>
+  <h2>{{TITLE}}</h2>
+  <div class="maturity-grid">
+    <div class="maturity-level">
+      <span class="maturity-tier">{{LEVEL_1_TIER}}</span>
+      <h3>{{LEVEL_1_HEADING}}</h3>
+      {{LEVEL_1_BODY}}
+    </div>
+    <div class="maturity-level">
+      <span class="maturity-tier">{{LEVEL_2_TIER}}</span>
+      <h3>{{LEVEL_2_HEADING}}</h3>
+      {{LEVEL_2_BODY}}
+    </div>
+    <div class="maturity-level">
+      <span class="maturity-tier">{{LEVEL_3_TIER}}</span>
+      <h3>{{LEVEL_3_HEADING}}</h3>
+      {{LEVEL_3_BODY}}
+    </div>
+    <div class="maturity-level">
+      <span class="maturity-tier">{{LEVEL_4_TIER}}</span>
+      <h3>{{LEVEL_4_HEADING}}</h3>
+      {{LEVEL_4_BODY}}
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span {{CLASSIFICATION}}</span>
+    <span class="footer-center">boozallen.com &nbsp;&middot;&nbsp; &copy; 2026 Booz Allen Hamilton, Inc.</span>
+    <div class="slide-number"></div>
+  </div>
+</div>

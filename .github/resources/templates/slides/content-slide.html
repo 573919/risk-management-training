@@ -1,0 +1,29 @@
+<!-- TEMPLATE: content-slide
+     Theme options: light (default), dark
+     Use for: key points, narrative, single-topic slides
+
+     PLACEHOLDER GUIDE:
+       {{THEME}}            -> light | dark
+       {{SLIDE_NUM}}        -> integer
+       {{LABEL}}            -> eyebrow / section tag
+       {{TITLE}}            -> slide headline (h2)
+       {{BODY}}             -> main content — choose one of:
+                              <p> paragraph
+                              <ul><li>...</li></ul> bullet list
+                              <div class="quote-block"><p class="quote-text">quote</p><p class="quote-attr">— source</p></div>
+       {{CLASSIFICATION}}   -> classification class + label, e.g.:
+                              class="footer-classification restricted">Booz Allen Hamilton Restricted
+                              class="footer-classification internal">Booz Allen Hamilton Internal
+                              class="footer-classification entrusted">Booz Allen Hamilton Entrusted
+                              or empty string if Non-Sensitive / None
+-->
+<div class="slide {{THEME}}" data-slide="{{SLIDE_NUM}}">
+  <div class="label">{{LABEL}}</div>
+  <h2>{{TITLE}}</h2>
+  {{BODY}}
+  <div class="slide-footer">
+    <span {{CLASSIFICATION}}</span>
+    <span class="footer-center">boozallen.com &nbsp;&middot;&nbsp; &copy; 2026 Booz Allen Hamilton, Inc.</span>
+    <div class="slide-number"></div>
+  </div>
+</div>

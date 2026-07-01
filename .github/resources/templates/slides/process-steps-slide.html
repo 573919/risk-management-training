@@ -1,0 +1,52 @@
+<!-- TEMPLATE: process-steps-slide
+     Theme options: light (default), dark
+     Use for: numbered process, sequential steps, simple workflow, approach overview
+
+     PLACEHOLDER GUIDE:
+       {{THEME}}              -> light | dark
+       {{SLIDE_NUM}}          -> integer
+       {{LABEL}}              -> eyebrow / section tag
+       {{TITLE}}              -> slide headline (h2)
+       {{STEP_1_NUM}}         -> step number display, e.g. "01" or "1"
+       {{STEP_1_KEYWORD}}     -> bold keyword/title for this step (≤3 words)
+       {{STEP_1_BODY}}        -> short description — 1–2 sentences max
+       {{STEP_2_NUM}}         -> repeat for each step (3–5 steps recommended)
+       {{STEP_2_KEYWORD}}
+       {{STEP_2_BODY}}
+       {{STEP_3_NUM}}
+       {{STEP_3_KEYWORD}}
+       {{STEP_3_BODY}}
+       {{CLASSIFICATION}}     -> classification class + label, e.g.:
+                                class="footer-classification restricted">Restricted
+                                or empty string if Non-Sensitive / None
+
+     NOTE: 3 steps shown by default. Add more .step-item blocks for 4–5 steps.
+           The grid auto-sizes columns equally. Keep body text to 1–2 sentences
+           per step — this is a summary view, not a detailed process doc.
+-->
+<div class="slide {{THEME}}" data-slide="{{SLIDE_NUM}}">
+  <div class="label">{{LABEL}}</div>
+  <h2>{{TITLE}}</h2>
+  <div class="step-row">
+    <div class="step-item">
+      <div class="step-number">{{STEP_1_NUM}}</div>
+      <div class="step-keyword">{{STEP_1_KEYWORD}}</div>
+      {{STEP_1_BODY}}
+    </div>
+    <div class="step-item">
+      <div class="step-number">{{STEP_2_NUM}}</div>
+      <div class="step-keyword">{{STEP_2_KEYWORD}}</div>
+      {{STEP_2_BODY}}
+    </div>
+    <div class="step-item">
+      <div class="step-number">{{STEP_3_NUM}}</div>
+      <div class="step-keyword">{{STEP_3_KEYWORD}}</div>
+      {{STEP_3_BODY}}
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span {{CLASSIFICATION}}</span>
+    <span class="footer-center">boozallen.com &nbsp;&middot;&nbsp; &copy; 2026 Booz Allen Hamilton, Inc.</span>
+    <div class="slide-number"></div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<!-- TEMPLATE: placemat-body-sidebar
+     Mode: PLACEMAT (dense reference material — requires .placemat class)
+     Theme options: light (default), dark
+     Use for: offering overviews, service descriptions, program summaries,
+              any dense content slide that needs a resource/contact sidebar
+
+     PLACEHOLDER GUIDE:
+       {{THEME}}              -> light | dark  (combined with .placemat: "placemat light" or "placemat dark")
+       {{SLIDE_NUM}}          -> integer
+       {{LABEL}}              -> eyebrow / section tag
+       {{BREADCRUMB}}         -> hierarchical path, e.g. "Overview &amp; Org Structure | Working with the CTO"
+                                 Leave empty string if not needed.
+       {{TITLE}}              -> slide headline (h2)
+       {{BODY_CONTENT}}       -> main content — multi-paragraph prose, bullets, or sub-sections.
+                                 Use <h3> for sub-headings within body. Can include:
+                                   <p>...</p>
+                                   <ul><li>...</li></ul>
+                                   <h3>Sub-heading</h3>
+       {{SIDEBAR_TITLE}}      -> sidebar section heading, e.g. "Resources & Contact Information"
+       {{SIDEBAR_ITEMS}}      -> sidebar content — links, contacts, quick bullets.
+                                 Recommended structure:
+                                   <p class="sidebar-section-title">Contact</p>
+                                   <ul class="sidebar-link-list">
+                                     <li><a href="mailto:team@bah.com">team@bah.com</a></li>
+                                   </ul>
+                                   <p class="sidebar-section-title">Resources</p>
+                                   <ul class="sidebar-link-list">
+                                     <li>SharePoint Site</li>
+                                     <li>Overview Document</li>
+                                   </ul>
+       {{CLASSIFICATION}}     -> classification class + label, e.g.:
+                                class="footer-classification internal">Internal
+                                or empty string if Non-Sensitive / None
+
+     DENSITY GUIDANCE: Body content should be 150–350 words. Keep sidebar items
+     to 8–12 entries max. Content exceeding slide height will scroll within the frame.
+-->
+<div class="slide placemat {{THEME}}" data-slide="{{SLIDE_NUM}}">
+  <div class="label">{{LABEL}}</div>
+  <div class="breadcrumb">{{BREADCRUMB}}</div>
+  <h2>{{TITLE}}</h2>
+  <div class="placemat-layout">
+    <div class="placemat-body">
+      {{BODY_CONTENT}}
+    </div>
+    <div class="placemat-sidebar">
+      <p class="sidebar-section-title">{{SIDEBAR_TITLE}}</p>
+      {{SIDEBAR_ITEMS}}
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span {{CLASSIFICATION}}</span>
+    <span class="footer-center">boozallen.com &nbsp;&middot;&nbsp; &copy; 2026 Booz Allen Hamilton, Inc.</span>
+    <div class="slide-number"></div>
+  </div>
+</div>

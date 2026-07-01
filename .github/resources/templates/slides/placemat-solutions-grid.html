@@ -1,0 +1,87 @@
+<!-- TEMPLATE: placemat-solutions-grid
+     Mode: PLACEMAT (dense reference material — requires .placemat class)
+     Theme options: light (default), dark
+     Use for: multi-solution comparison tables, product/service catalogs,
+              capability portfolios, feature matrices
+
+     COLUMN COUNT:
+       Set the number of solution columns with the --sol-cols CSS custom property.
+       Default: 3 columns.  Maximum recommended: 5 columns.
+       Usage: <div class="solutions-grid" style="--sol-cols: 4">
+       The first column is always a fixed-width row-label column (120px).
+
+     PLACEHOLDER GUIDE:
+       {{THEME}}              -> light | dark
+       {{SLIDE_NUM}}          -> integer
+       {{LABEL}}              -> eyebrow / section tag
+       {{BREADCRUMB}}         -> hierarchical path, e.g. "Core Tech | AI Apps & Space Tech | GenAI"
+       {{TITLE}}              -> slide headline (h2)
+       {{INTRO}}              -> optional one-sentence intro above the grid (use <p> or omit)
+       {{SOL_COLS}}           -> integer 2–5 for the --sol-cols value (default 3)
+
+       Column headers (one per solution):
+         {{SOL_1_TITLE}}      -> solution name
+         {{SOL_2_TITLE}}
+         {{SOL_3_TITLE}}      -> add/remove to match {{SOL_COLS}}
+
+       Row content (4 standard rows — Overview, Problem Solved, Benefits, Resources):
+         {{SOL_1_OVERVIEW}}   -> 1–2 sentences
+         {{SOL_2_OVERVIEW}}
+         {{SOL_3_OVERVIEW}}
+         {{SOL_1_PROBLEM}}    -> problem this solution addresses
+         {{SOL_2_PROBLEM}}
+         {{SOL_3_PROBLEM}}
+         {{SOL_1_BENEFITS}}   -> 2–4 short bullet points or short paragraph
+         {{SOL_2_BENEFITS}}
+         {{SOL_3_BENEFITS}}
+         {{SOL_1_RESOURCES}}  -> links, demos, case studies (plain text or <a> tags)
+         {{SOL_2_RESOURCES}}
+         {{SOL_3_RESOURCES}}
+
+       {{CLASSIFICATION}}     -> classification class + label, or empty string
+
+     NOTE: Add or remove .solutions-col-header and .solutions-cell elements to match
+     the column count. Each row needs one .solutions-row-label + N .solutions-cell blocks.
+-->
+<div class="slide placemat {{THEME}}" data-slide="{{SLIDE_NUM}}">
+  <div class="label">{{LABEL}}</div>
+  <div class="breadcrumb">{{BREADCRUMB}}</div>
+  <h2>{{TITLE}}</h2>
+  {{INTRO}}
+  <div class="solutions-grid" style="--sol-cols: {{SOL_COLS}}">
+    <!-- Header row -->
+    <div class="solutions-col-header row-label-header"></div>
+    <div class="solutions-col-header">{{SOL_1_TITLE}}</div>
+    <div class="solutions-col-header">{{SOL_2_TITLE}}</div>
+    <div class="solutions-col-header">{{SOL_3_TITLE}}</div>
+
+    <!-- Overview row -->
+    <div class="solutions-row-label">Overview</div>
+    <div class="solutions-cell">{{SOL_1_OVERVIEW}}</div>
+    <div class="solutions-cell">{{SOL_2_OVERVIEW}}</div>
+    <div class="solutions-cell">{{SOL_3_OVERVIEW}}</div>
+
+    <!-- Problem Solved row -->
+    <div class="solutions-row-label">Problem Solved</div>
+    <div class="solutions-cell">{{SOL_1_PROBLEM}}</div>
+    <div class="solutions-cell">{{SOL_2_PROBLEM}}</div>
+    <div class="solutions-cell">{{SOL_3_PROBLEM}}</div>
+
+    <!-- Benefits row -->
+    <div class="solutions-row-label">Benefits</div>
+    <div class="solutions-cell">{{SOL_1_BENEFITS}}</div>
+    <div class="solutions-cell">{{SOL_2_BENEFITS}}</div>
+    <div class="solutions-cell">{{SOL_3_BENEFITS}}</div>
+
+    <!-- Resources row -->
+    <div class="solutions-row-label">Resources</div>
+    <div class="solutions-cell">{{SOL_1_RESOURCES}}</div>
+    <div class="solutions-cell">{{SOL_2_RESOURCES}}</div>
+    <div class="solutions-cell">{{SOL_3_RESOURCES}}</div>
+  </div>
+  <div class="slide-footer">
+    <span {{CLASSIFICATION}}</span>
+    <span class="footer-center">boozallen.com &nbsp;&middot;&nbsp; &copy; 2026 Booz Allen Hamilton, Inc.</span>
+    <div class="slide-number"></div>
+  </div>
+</div>

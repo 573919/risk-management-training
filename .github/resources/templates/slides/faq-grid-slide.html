@@ -1,0 +1,48 @@
+<!-- TEMPLATE: faq-grid-slide
+     Theme options: light (default)
+     Use for: Q&A slides, objection handling, "what / why / how / when" slides
+
+     PLACEHOLDER GUIDE:
+       {{SLIDE_NUM}}        -> integer
+       {{LABEL}}            -> eyebrow text
+       {{TITLE}}            -> slide headline (h2)
+       {{Q1}} {{A1}}        -> question + answer for top-left cell
+       {{Q2}} {{A2}}        -> question + answer for top-right cell
+       {{Q3}} {{A3}}        -> question + answer for bottom-left cell
+       {{Q4}} {{A4}}        -> question + answer for bottom-right cell
+       {{CLASSIFICATION}}   -> classification class + label, e.g.:
+                              class="footer-classification internal">Booz Allen Hamilton Internal
+                              class="footer-classification restricted">Booz Allen Hamilton Restricted
+                              class="footer-classification entrusted">Booz Allen Hamilton Entrusted
+                              or empty string if Non-Sensitive / None
+
+     Note: The 2×2 grid works best with answers of roughly equal length.
+           Keep questions under 10 words for best visual balance.
+-->
+<div class="slide light" data-slide="{{SLIDE_NUM}}">
+  <div class="label">{{LABEL}}</div>
+  <h2>{{TITLE}}</h2>
+  <div class="faq-grid">
+    <div class="faq-item">
+      <div class="faq-q">{{Q1}}</div>
+      <div class="faq-a">{{A1}}</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">{{Q2}}</div>
+      <div class="faq-a">{{A2}}</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">{{Q3}}</div>
+      <div class="faq-a">{{A3}}</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">{{Q4}}</div>
+      <div class="faq-a">{{A4}}</div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span {{CLASSIFICATION}}</span>
+    <span class="footer-center">boozallen.com &nbsp;&middot;&nbsp; &copy; 2026 Booz Allen Hamilton, Inc.</span>
+    <div class="slide-number"></div>
+  </div>
+</div>

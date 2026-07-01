@@ -1,0 +1,1668 @@
+﻿--- Slide 1 ---
+OCIO Enterprise Risk Framework
+Sample Presenter Name
+Sample Presenter Title
+Sample Presenter Name
+Sample Presenter Title
+2026
+
+--- Slide 2 ---
+Introduction to the OCIO Enterprise Risk Framework
+
+--- Slide 3 ---
+OCIO Enterprise Risk Framework Training
+In today’s complex environment, persistent risks challenge our ability to deliver secure, reliable operations—we must address them proactively.
+This framework applies across all OCIO systems, applications, networks, and personnel, unifying our approach to risk and is equipped with the tools to effectively strengthen our operations.
+Included in this training is :
+Roles & Responsibilities for Risk Management
+Summary of OCIO Risk Types
+OCIO’s Approach to Risk Assessment & Prioritization
+Risk Ranking
+Documenting in the ServiceNow Risk Register
+OCIO’s Expectations for Risk Communication & Escalation
+Risk Reporting
+For additional Best Practices, reference the
+Helpful Resources
+section in the Appendix of this training.
+
+--- Slide 4 ---
+The Guiding Purpose of Our Framework
+
+--- Slide 5 ---
+Roles & Responsibilities
+
+--- Slide 6 ---
+Responsibilities Executed Through Clear Structure
+Effective risk management is fundamental to our mission. It requires a formal framework where every individual understands their specific roles. This section will cover role clarity and risk as a shared responsibility.
+Clear Ownership:
+Accountability is explicitly defined at every level of the organization.
+Transparency:
+Risk information flows logically to the appropriate people.
+Individual Role Clarity:
+Success requires that every individual understands their specific responsibilities within the framework.
+Consistency:
+A uniform approach is applied to identifying, evaluating and managing risk.
+
+--- Slide 7 ---
+IT Risk: A Shared Responsibility
+
+--- Slide 8 ---
+Our Risk Management Hierarchy
+Our framework cascades from strategic vision to on-the-ground execution,
+ensuring alignment and
+clear lines of accountability.
+
+--- Slide 9 ---
+Setting the Tone from the Top: The Role of the CIO
+Executive Communication & Oversight
+Framework & Delegation
+Strategic Direction &
+Alignment
+Aligns risk posture with the
+organizational mission,
+strategy, and regulatory
+environment.
+Champions the integration of
+risk considerations into strategic planning
+and digital transformation initiatives.
+Approves the organizational risk appetite and tolerance.
+Endorses risk management frameworks, policies and escalation models
+.
+Ensures risk responsibilities are clearly delegated and embedded across all IT functions.
+Decision making authority for governance boards.
+Communicates key risk information to the NSF Executive Leadership Team.
+Reviews the enterprise risk profile.
+Oversees and sets the tone for clear ownership, awareness, and transparency.
+
+--- Slide 10 ---
+The Critical Layer of Governance
+Core Function
+Enterprise IT Governance Board
+This board acts as the senior forum for resolving significant, cross-functional IT risks that have been formally escalated from lower levels.
+Addresses
+escalated IT risks, issues, or corrective action plans.
+Sets the strategic direction and goals for OCIO.
+Establishes IT priorities and approves enterprise-wide and significant IT initiatives ensuring alignment with NSF strategies.
+Monitors progress of major IT programs, projects and implementations to ensure objects are achieved.
+Core Function
+Business Demand Governance Board
+This board acts as the senior forum for evaluating risks associated with business needs.
+Evaluates risks associated with new requirements and alignment of resources, technology, and initiatives with mission needs and strategic priorities.
+Monitors progress of approved initiatives to ensure results meet business need objectives.
+Decision making authority falls with the Chief Management Office (CMO) and Chief Science Officer (CSO).
+
+--- Slide 11 ---
+Connecting Strategy to Action: Role of the Branch Chief
+Culture & Adoption
+Oversight & Validation
+Escalation & Assessment
+Serves as the initial escalation point for risks rated moderate and above.
+Assesses risk validity, impact and urgency to determine the correct path for mitigation or further escalation.
+Escalates high/critical risks to leadership providing full context on business impact and mitigation status.
+Ensures visibility of cross-cutting risks that might have interdependencies.
+Validates that mitigation plans for escalated risks are on track and sufficient.
+Consistently reviews risk dashboard and the enterprise risk profile.
+Promotes a culture where staff feel empowered to proactively raise risks.
+Appoints Risk Owners within the branch/division.
+Is accountable for ensuring the adoption of risk procedures and processes by Risk Owners.
+
+--- Slide 12 ---
+The Front Line of Risk Management: The Role of the Risk Owner
+1. Identify & Evaluate
+Identify, evaluate and document risks using prescribed procedures to ensure consistency and comparability of risks across OCIO
+Continuously scan for emerging risks and ensure monitoring is occurring
+3. Escalate & Own
+Self-manage all ‘low’ rated risks
+Escalate ‘medium’ or ‘high’ risks to the Branch Chiefs for discussion on risk tolerance and trade-offs
+Review the enterprise risk dashboards and profile to understand the broader context
+2. Manage & Mitigate
+Manage the implementation of all risk/mitigation activities
+Regularly track the risk’s status and the effectiveness of mitigations
+4. Document & Report
+Maintain the risk register withal new developments, changes and progress
+Ensure risk reporting is transparent- data driven and action-oriented
+Document risk closure with rationale, actions taken, and lessons learned
+
+--- Slide 13 ---
+OCIO Risk Types
+
+--- Slide 14 ---
+Summary of Risk Types (1/2)
+Risk Type
+Risk Description
+Budget Risk
+Cost creep or miscalculation of initial costs that result in inaccurate baseline against which to estimate and compare future costs (initial cost
+Misestimation of life-cycle costs and exceeding forecasts (life-cycle costs); lack of cost controls
+Change Management Risk
+Changes to IT systems, processes or organizational structures that are not effectively assessed or communicated resulting in user resistance, failure to achieve intended outcomes, or unsustainable customer service support
+Compliance Risk
+Federal Regulation Violations: non-compliance with federal guidance
+Failure to follow IT standards: NIST SP 800-53, FISMA, FedRAMP
+Inadequate Reporting & Documentation: Improper record-keeping/lack of audit trails
+Cultural/ Organizational Risk
+Internal cultural, behavioral, or structural issues within an organization that hinder performance, morale, or adaptability
+Data Risk
+The accuracy, completeness, and consistency of data ensuring data is reliable and trustworthy for use in decision-making and other processes
+Loss/misuse of data or information
+Fraud Risk
+Deceptive or dishonest activities for personal or organizational gain.
+Financial Risk
+Improper payments & fraudulent disbursements: errors or fraudulent disbursement of grants leading to financial loss
+Governance Risk
+Ineffective decision-making structures, unclear accountability or limited oversight resulting in poor organizational directions, misaligned priorities or non-compliance with regulations/policies.
+Personnel Risk
+Possibility of impacts when resources are inadequate or limited, leading to project failure, poor quality, missed deadlines, etc.
+Policy Risk
+Inadequate, outdated, or unclear policies or regulations that impact operations
+
+--- Slide 15 ---
+Summary of Risk Types (2/2)
+Risk Type
+Risk Description
+Quality Risk
+Possibility of a defect or failure that can negatively impact the quality of a product, service or process
+Reputational Risk
+Public scrutiny, media exposure, stakeholder trust issues: mismanaged grants or cybersecurity breaches resulting in public/congressional scrutiny
+Schedule Risk
+Project delay or insufficient time to complete milestones leading to missed deadlines, cost overruns.
+Scope Risk
+Possibility of uncertain events that can negatively impact a project’s objectives leading to rework, cost overruns, attrition, etc.
+Lack of consensus on business objectives
+Security Risk
+Data breaches & Unauthorized Access/Compromised Accounts: sensitive grant application data, PII, financial details
+Ransomware & Cyber Attacks: phishing, malware, etc.
+Insider Threats: Employees or contractors with access to grants management systems intentionally or unintentionally comprising security
+Cloud & Third-party: vulnerabilities in third party platforms
+Strategic Risk
+Internal or external factors impacting strategy that affect the Foundation's ability to achieve its long-term goals and objectives (e.g., misaligned priorities, failure to adapt to changing environments)
+System Operational Risk
+System downtime/ technical failures: platform outages impacting end-users’ ability to submit proposals/financial requests, view proposals/reports, review proposals; not following configuration management best practices, etc.
+Technology Obsolescence Risk
+Outdated technology no longer meets the current needs of a business or industry due to advancements or changing requirements
+Lack of modernization (technical obsolescence)/ technical debt): legacy systems creating inefficiencies, security vulnerabilities, and increased maintenance costs
+Vendor/Third-Party Risk
+External providers such as third-party vendors, contractors or suppliers fail to deliver as expected, resulting in operational disruption, security exposure, etc.
+
+--- Slide 16 ---
+Risk Assessment & Prioritization
+
+--- Slide 17 ---
+Every Risk is Assessed Along Two Dimensions
+
+--- Slide 18 ---
+Step 1: Defining Probability
+Probability measures the likelihood that a risk event will occur. We use four
+standardized levels for consistent evaluation across all teams and functions.
+This risk is expected
+to occur and/or has
+occurred numerous
+times historically.
+Absolute
+The risk has a high
+chance of occurring
+and/or has some
+history of
+occurrence
+historically.
+High
+Likelihood
+The risk may occur
+but is not highly
+probable, some
+history of
+occurrence with
+similar scenarios.
+Moderate
+Likelihood
+The risk is not
+expected to occur
+based on current
+current conditions,
+limited historical
+precedent.
+Low
+Likelihood
+
+--- Slide 19 ---
+Probability & Complexity Considerations
+(<20%)
+LOW
+(~20-40%)
+MODERATE
+(~40-70%)
+HIGH
+(>70%)
+ABSOLUTE
+RANK: 4
+RANK: 3
+RANK: 2
+RANK: 1
+Highly complex, multi-stakeholder initiatives
+No proven precedent
+Rapidly changing or poorly defined requirements
+Not tested
+Complexity Considerations
+This risk is expected to occur and/or has
+occurred
+numerous times historically.
+Moderate complexity with evolving processes
+Some dependencies on other teams/vendors
+Requirements may require minor interpretation
+Moderately tested
+Complexity Considerations
+The risk may occur but is not highly
+probable, some
+history of occurrence
+with similar scenarios.
+Significant interdependencies
+Extremely customized solution
+Somewhat ambiguous requirements
+Minimally tested
+Complexity Considerations
+The risk has a high chance of occurring and/or
+has some history of occurrence historically.
+Low complexity, repeatable work
+Minimal to no interdependencies
+Stable technologies
+Fully or nearly fully automated processes
+Clear requirements
+Thoroughly tested
+Complexity Considerations
+The risk is not expected to occur based on
+Current
+conditions, limited historical precedent.
+
+--- Slide 20 ---
+Hallmarks of a Good Likelihood Assessment
+Considers external drivers such as
+regulatory pressures.
+Evaluates vendor reliability, technical
+stability, and operational capacity.
+Externally Conscious
+Operationally Grounded
+Considers triggers, trends, and
+historical patterns.
+Uses evidence, not guesswork.
+Pattern-Aware
+Evidence-Based
+
+--- Slide 21 ---
+Step 2: Assessing Impact
+Impact describes the consequence of the risk if it were to occur. Our assessment considers multiple key enterprise dimensions to ensure a holistic view.
+Base your assessment on realistic, not worst-case or hypothetical, scenarios.
+
+--- Slide 22 ---
+Deep Dive: Impact Definitions by Risk Type (1/6)
+Impact
+1 – High Impact
+2 – Medium Impact
+3 – Low Impact
+Budget Impact
+Devastating impact requiring major budget reallocation, potentially jeopardizing the entire project and requiring significant changes to the project's objectives or even cancellation
+Noticeable impact requiring significant adjustments or rework and potentially impacting some project deliverables
+Minor impact requiring minor adjustments but still manageable within the overall budget
+Change Management Impact
+NSF-wide or scientific-community confusion to change; failure to adopt new system/processes;
+significant training, communication and/or knowledge management gaps;
+failed transformation initiative
+Moderate user resistance to change across subset of OCIO system users; training, communication and/or knowledge management gaps
+Minor resistance or slow adoption to change that may take longer but can be managed through reinforcement & communication
+Compliance Impact
+Non-compliance with key federal regulations/ mandates that could lead to funding impacts, legal action, investigations, fines, or severe audit findings
+Slight delays or minor penalties in implementing regulations/mandates or audit deficiencies identified. Moderate impact on agency operations, resolvable with adjustments
+Minimal compliance impact, potential delays in implementing regulations/ mandates but within federal guidelines. No penalties: minor compliance issues that require process improvements but do not trigger the need for major oversight
+Cultural/ Organizational Impact
+Severe disruption to organizational culture NSF wide (toxic culture), mass resignations, or loss of trust
+Localized dissatisfaction within OCIO branches/divisions, misalignment, cultural strain or miscommunication that impact collaboration
+Isolated morale, complaints, or team cohesion issues with quick recovery
+
+--- Slide 23 ---
+Deep Dive: Impact Definitions by Risk Type (2/6)
+Impact
+1 – High Impact
+2 – Medium Impact
+3 – Low Impact
+Data Integrity Impact
+Inaccurate or incomplete data impacting decision-making, reporting or compliance requiring extensive recovery and validation efforts; NSF-wide data loss or corruption impacting public trust
+Data governance issues causing inefficiencies or rework in operations or data analytics but with manageable, targeted corrections
+Some data quality issues with minor operational impact, easily fixed
+Financial Impact
+Financial loss that requires corrective action and triggers OMB/PIIA reporting thresholds;
+could impact ability to secure future appropriations
+. Large-scale systemic failure with potential to undermine public trust in grant program integrity; could result in major federal investigations; high reputational, compliance, and political fallout
+Financial loss that requires corrective action at the program level, but no OMB/PIIA reporting triggered
+PIIA: Payment Integrity Information Act of 2019
+Minimal financial loss; easily correctable without external reporting; no disruption to program delivery
+Fraud Impact
+Substantial/widespread financial loss, significant operational disruptions, and serious damage to foundation's reputation, potentially leading to legal consequences
+Moderate financial loss, some operational disruption, and potential reputational damage
+Low impact on the organization that is isolated to one minor incident that could lead to a small financial loss and minor operational disruption, but would not significantly affect the foundation's overall financial health or reputation
+
+--- Slide 24 ---
+Deep Dive: Impact Definitions by Risk Type (3/6)
+Impact
+1 – High Impact
+2 – Medium Impact
+3 – Low Impact
+Governance Impact
+Lack of decision-making clarity leading to duplicated efforts or failed mission execution; complete breakdown in accountability or oversight resulting in mission failure funding loss or legal exposure
+Inconsistent governance or oversight across OCIO causing delays or confusion in execution
+Minor governance gaps: decisions may take longer but operations continue; impacts can be easily overcome with communication
+Operational Impact
+Operational mission disruption across OCIO community, failure impacting multiple systems, outage/mission disruption impacting >2 people and lasting greater than 2 days
+, permanent data loss, inability to recover without external intervention
+Partial mission service disruption across OCIO, outage impacting >2 people, notable delays in business operations, degraded system performance
+Minimal impact on operations, little noticeable effect on service delivery, resolved with minimal effort;
+service degradation but alternative processes/ workarounds available
+Personnel Impact
+Key vacancies, skills gaps or turnover in critical NSF or OCIO-wide roles impacting decision-making or delivery timelines; minimal to no cross-training or succession planning in place
+Staffing challenges within OCIO causing minor delays or reallocation of work; partial backfill strategies and some cross-training established
+Temporary shortages within OCIO
+branch/
+divisions but easily mitigated due to established backfill strategy or established cross-training
+
+--- Slide 25 ---
+Deep Dive: Impact Definitions by Risk Type (4/6)
+Impact
+1 – High Impact
+2 – Medium Impact
+3 – Low Impact
+Policy Impact
+Policy shifts delay programs or requires significant changes in direction with strong opposition from key stakeholders
+; federal/legislative changes or major policy failure that cause major funding loss, mission shutdown, or program cancellation
+Adjustments to policy require re-scoping but are manageable, due to moderate policy delays or resistance from specific groups
+Minor policy adjustments needed with small operational implications and limited stakeholder pushback
+Quality
+Impact
+Significant quality issues, requiring extensive rework or redesign
+; major defects or failures, rendering deliverables unusable or unsafe
+Moderate quality issues, fixable with planned quality assurance efforts
+Minor quality issues, addressed through routine quality controls
+Reputational Impact
+NSF-wide concerns, significant public and stakeholder concerns/dissatisfaction, audit findings resulting in significant concerns, regulatory scrutiny, long-term damage to reputation
+Internal OCIO-level concerns, no public concerns, stakeholder complaints requiring clarification, audit findings resulting in moderate concerns
+Internal branch/division-level concerns, no public concerns, stakeholder complaints requiring clarification
+Schedule
+Impact
+Unrecoverable
+delays for fixed date deadlines, jeopardizing critical milestones, lapse in service of a mission critical function, or significant cost implications
+Recoverable delays for fixed date deadlines, with manageable milestone adjustments, temporary lapse in service of a non-mission critical or non-key function, or little cost implications
+Recoverable delays for fixed date deadlines, with minor impact on milestones, no lapse in service of function, or no cost implications
+
+--- Slide 26 ---
+Deep Dive: Impact Definitions by Risk Type (5/6)
+Impact
+1 – High Impact
+2 – Medium Impact
+3 – Low Impact
+Scope
+Impact
+Significant scope reduction or expansion, altering core project objectives or impacting key deliverables
+Moderate scope adjustments, manageable without altering core objectives
+Minor scope tweaks, no impact on core objectives
+Security Impact
+Cybersecurity breach exposing sensitive data or safety (e.g. PII, IC), critical infrastructure attack, unauthorized system access causing widespread disruption or major harm, requiring major remediation
+Potential harm to operations, assets, or individuals that goes beyond a minor convenience but doesn’t involve breach of sensitive data or safety
+Minor security threat that could lead to unsuccessful intrusion attempts, controls in place to mitigate threats; contained security incident expected to have limited impact
+Strategic Impact
+NSF's long-term mission/goals are compromised; IT strategy is misaligned with mission priorities
+Moderate misalignment with OCIO strategic planning, however there is an ability to shift priorities with minimal fallout
+Minor discrepancies between OCIO strategic planning and execution; those discrepancies are not impacting NSF’s mission; can be easily corrected with communication
+Technology Obsolescence Impact
+Key systems approaching end-of-life, causing instability, outages or high maintenance costs or no implementation plan for remediation; system failure across NSF due to unsupported or legacy technologies, lack of updates/patches for security vulnerabilities
+Decreased efficiency or workaround required due to outdated platforms, potential performance issues are surfacing, talent shortage due to tech obsolescence, internal technologies not compatible with external innovations/ emerging technology
+Minor delays in system updates; non-critical legacy systems pending modernization; minimal impact on operations; minor user experience issues
+
+--- Slide 27 ---
+Deep Dive: Impact Definitions by Risk Type (6/6)
+Impact
+1 – High Impact
+2 – Medium Impact
+3 – Low Impact
+Vendor/Third-Party Impact
+Mission critical vendors or critical dependencies fail to meet contractual obligations, halts operations, violates compliance, causes a breach or causes system wide breakdowns with no backup, workaround, or exit plan
+Inconsistency in vendor delivery, some moderate integration challenges, or quality delivery concerns cause delays, but are manageable with oversight or planned adjustments
+General performance of vendors/ third parties is strong; Occasional vendor performance issues or missed SLAs; no significant dependencies on one vendor
+
+--- Slide 28 ---
+Risk Ranking
+
+--- Slide 29 ---
+Risk Ranking: Why We Move Beyond ‘Gut Feel’ Assessments
+This module will cover the formula to determine the risk rank and best practices for accurate implementation.
+
+--- Slide 30 ---
+Defining Risk Exposure
+Risk ranking is a systematic process that combines two key dimensions, probability & impact, to
+determine the level of risk exposure
+
+--- Slide 31 ---
+Components of a Risk Rank
+Component 1: Probability
+;
+The likelihood of a specific risk event occurring. This is not a guess, but an informed estimate based on available data, historical trends, or expert analysis.
+Component 2: Impact
+; The consequence, effect, or magnitude of harm if the risk event were to happen. Impact can be measured across various domains, including financial, operational, and reputational.
+
+--- Slide 32 ---
+Putting the Formula into Practice
+Impact
+Probability
+1
+2
+3
+High Impact
+Medium Impact
+Low Impact
+1
+1-High
+1-High
+2-Medium
+Absolute Certainty risk will occur (>70%)
+2
+1-High
+1-High
+2-Medium
+Highly Likely risk will occur (40-70%)
+3
+2-Medium
+2-Medium
+3-Low
+Moderate Likelihood risk will occur (20-40%)
+4
+2-Medium
+3-Low
+3-Low
+Low Likelihood risk will occur (<20%)
+A risk's position on the
+matrix determines its rank.
+By considering the values for
+probability and impact, we
+can assign a rank that allows for direct
+comparison and prioritization of different risks.
+
+--- Slide 33 ---
+Good Ranking Practice 1: Use Evidence
+Ground every rank in objective, verifiable data. Avoid subjective assessments that cannot be substantiated.
+
+--- Slide 34 ---
+Good Ranking Practice 2: Validate Ranks
+Risk ranks should be reviewed and challenged to ensure consistency and alignment across the organization. This calibration process prevents individual bias from skewing results.
+Incorporate rank validation into your leadership and governance reviews. This creates a forum for discussion and builds collective ownership of the risk landscape.
+
+--- Slide 35 ---
+Good Ranking Practice 3: Update Ranks
+Risk is not static. Ranks must be revisited and updated to reflect the current reality.
+Re-evaluate ranks under two conditions:
+When mitigations progress: As you implement controls, the probability or impact may decrease
+When conditions change: External factors (market shifts, new regulations) or internal changes can alter a risk’s profile.
+
+--- Slide 36 ---
+Documenting in a Risk Register
+
+--- Slide 37 ---
+Documenting a Risk in ServiceNow
+The OCIO Risk Register resides in ServiceNow and can be created and managed in the Strategic Planning and Project Workspaces. As a
+p
+rerequisite
+, the P
+ortfolios, Programs, and Projects must be set up. Risks can be created
+by navigating to the respective
+Portfolio, Program, or Project details Risks tab.
+Access the Strategic Planning Workspace or Project Workspace
+Ensure the Portfolio, Programs, Projects have already been set up
+Navigate to the respective Portfolio, Program, or Project where the risk should be entered
+Select the Risks tab then select the ‘New’ button
+Complete fields with risk related information
+
+--- Slide 38 ---
+Step 1: Clearly Defining the Potential Issue in the ‘Description’ Field and Summarize in the ‘Short Description’ Field
+Short Description Field Example:
+Incomplete or timely reorganization requirements may cause access loss, delayed access provisioning, and role ambiguity
+Description Field Example:
+Description/Background:
+An NSF-wide reorganization is scheduled for Q2, including updates to organizational structures and workforce roles. These changes are expected to impact system access and role assignments across users.
+Risk
+: If the reorganization requirements are not provided timely and accurately documented, then the
+reorganization may result in unintended access loss, delayed access provisioning, and role ambiguity. This is likely to drive an increase in production support tickets and escalations, potentially exceeding current support capacity.
+Impact
+:
+Strained production support capacity may lead to slower response and resolution times, resulting in delays for users performing time-sensitive actions in downstream systems and potential disruption to business operations.
+
+--- Slide 39 ---
+Step 2: Planning Your Proactive Responses in the ‘Mitigation Plan’ Field and Reactive Responses in the ‘Work Notes’ field
+Mitigation Field Example:
+M1: Targeted Communications
+Comms Lead (Jane Doe) delivers proactive, targeted communications to leadership and end users outlining expected access changes, common issues, and self-service guidance to reduce avoidable support tickets.
+M2: Priority Triage for Access Issues
+Implement an expedited triage process for access-related incidents, prioritizing issues impacting critical systems and time-sensitive business functions to minimize operational disruption.
+M3: Temporary Surge Support
+(optional but recommended)
+Allocate temporary surge support capacity during the reorganization period to handle increased ticket volume and prevent backlog accumulation.
+Work Notes Field Example:
+Contingency:
+Stand up a rapid-response support team dedicated to critical access and role issues, available 24/7 for a defined period after the reorg to resolve high-impact tickets immediately.
+Closure:
+Risk can be closed once thorough impact analysis is conducted, access and roles are fully updated and validated across all affected systems.
+
+--- Slide 40 ---
+Step 3: Quantifying the Risk with Dates and Ranking
+Assigning values and dates allows us to prioritize and monitor risks effectively.
+The severity of the consequences if the risk occurs, also ranked on a scale: High, Medium, Low
+Impact
+The likelihood of the risk occurring, ranked on a scale: Absolute, High, Moderate, and
+Low
+Probability
+Due Date: The projected date or timeframe
+to resolve the risk.
+Key Date
+
+--- Slide 41 ---
+The Federal Risk Owner Review Workflow
+Each risk must have a risk
+o
+wner, be assigned, and reviewed by the designated federal risk owner for the relevan
+t project. The review ensures alignment, proper assessment, and validates the planned mitigation strategies.
+Once approved, the risk becomes active in the register and is subject to regular monitoring. The
+Risk State, which tracks
+the current management lifecycle of a risk, and the Risk Status, which tracks the risk response should also be managed
+throughout the life of the risk.
+Approval & Monitoring
+3
+Federal Risk Owner reviews the risk definition, impact, and proposed actions. They may approve, reject,
+or request clarification. Document review date, who reviewed, and decision in the ‘Work notes’ field.
+Assessment
+2
+Risk owner completes risk entry, assigns the risk, and prepares risk for review.
+Submission
+1
+
+--- Slide 42 ---
+Key Takeaways for Effective Risk Management
+Be specific and clear:
+Vague risks cannot be managed. Clearly state the cause, event & impact.
+Separate proactive from reactive:
+Your ‘action’ prevents the risk; your ‘contingency’ is the plan for when it happens.
+Rate risks consistently:
+Use the official probability and impact matrix to ensure risk is evaluated objectively.
+Follow the review process:
+Ensure every risk is properly reviewed and approved by the federal risk owner.
+
+--- Slide 43 ---
+Risk Communication & Escalation
+
+--- Slide 44 ---
+The Communication & Escalation Protocol
+Effective communication is essential for managing potential hazards. This process ensures that risks
+are escalated to the appropriate governing body for timely review, mitigation, and decision-making.
+
+--- Slide 45 ---
+The First Step: Determine the Risk Value
+Escalate for executive
+and governance review
+HIGH
+Inform and review at
+the branch level.
+MEDIUM
+Manage within the team.
+LOW
+Every risk is first assessed and assigned a value. This value determines the entire
+escalation path, the people involved, and the communication channels used.
+
+--- Slide 46 ---
+Our Three Paths for Risk Escalation
+The following slides will detail the specific actions, governing bodies, and
+communication channels for each path.
+
+--- Slide 47 ---
+Managing Low-Value Risks
+LOW: MANAGE AT TEAM LEVEL
+
+--- Slide 48 ---
+Escalating Medium-Value Risks
+MEDIUM:
+Risk Owner/Federal Lead informs
+Branch Chief who conducts
+risk reviews
+
+--- Slide 49 ---
+Escalating High-Value Risks
+HIGH:
+Branch Chief INFORMS CIO & GOVERNANCE
+BOARDS TO DISCUSS RISK TOLERANCE
+
+--- Slide 50 ---
+The Complete Risk Escalation Process Map
+
+--- Slide 51 ---
+How to Communicate Risks to Leadership
+A checklist for effective and actionable briefings.
+Clear, concise risk statements
+Mitigation effectiveness summary
+Updated ranking with rationale
+Specific decision requests (e.g., funding, resources, scope updates)
+Implications for delivery, compliance, or operations
+
+--- Slide 52 ---
+Risk Reporting
+
+--- Slide 53 ---
+Risk Reporting is Our Foundation for Proactive Defense
+Effective risk reporting is crucial for proactive threat detection, informed decision-making, and
+maintaining compliance. It allows us to identify potential vulnerabilities and implement corrective
+measures before they escalate.
+This framework is designed to minimize the impact of potential
+incidents and strengthen our organizational resilience.
+
+--- Slide 54 ---
+A Unified View: Our Commitment to Comprehensive Oversight
+To be effective, our view of risk cannot be siloed. This process ensures that insights are shared through
+all appropriate communication channels, providing a complete and actionable picture of our risk
+landscape as described in the Risk Escalation process.
+Our risk reporting framework includes all risks
+across the entire organization.
+Business Operations Branch
+Mission & Support Products Branch
+Cybersecurity Services Branch
+Digital Innovation Branch
+Operations & Support Services Branch
+Data, Analytics & AI Branch
+
+--- Slide 55 ---
+Two Reports, Two Distinct Purposes
+Delivers a prioritized, strategic portfolio
+of our most significant risks.
+The Enterprise
+Risk Profile
+Provides a real-time, operational view
+of our current risk environment.
+The Enterprise Risk
+Dashboard
+
+--- Slide 56 ---
+The Enterprise Risk Dashboard: Your Real-Time View
+Displays real-time risks, including levels,
+categories, ratings, a heat map, incident
+summaries, and the status of response
+and resolution efforts
+Key Purpose:
+For Risk Owners: To review risk status, prioritize mitigations, discuss initiatives, and escalate as needed.
+For Risk Owners & Branch Chiefs: Analyze risk trends, emerging risks, incident impact and post-incident actions.
+
+--- Slide 57 ---
+The Enterprise Risk Profile: The Prioritized Portfolio
+A prioritized, portfolio-level inventory of the
+most significant risks identified through our
+formal risk assessment process.
+Key Purpose:
+Provides a ‘filtered/queried view’ of high-rates risks from the Risk Register.
+Reviewed and approved by the CIO to inform strategic decision-making.
+This profile includes, at a minimum, all risk that have been assigned a “High” risk rating.
+Require screenshot of CIO Risk Dashboard
+
+--- Slide 58 ---
+The Risk Ranking Heat Map
+
+--- Slide 59 ---
+Key Takeaways for Risk Reporting
+Risk reporting is a crucial business function that enables proactive threat detection, informed decision-making, and regulatory compliance. It provides a structured way to identify, measure, and communicate risks to minimize the impact of incidents like data breaches.
+Enables Proactive Threat Detection:
+Identifies potential vulnerabilities and allows for corrective measures before incidents occur.
+Informs Strategic Decisions:
+Provides leadership with the necessary data to prioritize responses and initiatives.
+Minimizes Incident Impact:
+Helps reduce the negative effects of events like cyberattacks and data breaches.
+Key Reporting Tools
+Enterprise Risk Dashboard: A real-time display of all risks for owners to monitor status and prioritize actions.
+Enterprise Risk Profile: A high-level inventory of the most significant risks for executive (CIO) review.
+
+--- Slide 60 ---
+Helpful Resources
+
+--- Slide 61 ---
+What is a Risk?
+WHAT IS A “RISK”? :
+The possibility that an event will occur that could impact organizational objectives.
+ANATOMY OF A WELL-FORMED RISK STATEMENT:
+A statement that clearly articulates the cause, the event and the potential impact.
+CLARITY CREATES ALIGNMENT:
+A formal definition separates true risks from simple issues or dependencies.
+IMPACT
+EVENT
+CAUSE
+
+--- Slide 62 ---
+A Systemic Process for Effective Risk Management
+
+--- Slide 63 ---
+A Consistent Approach is the Foundation for Effective Action
+A consistent approach to defining risk enables us to work more effectively across the entire organization.
+
+--- Slide 64 ---
+Risk Management Lifecycle
+
+--- Slide 65 ---
+Mastering the 6-Step Risk Management Lifecycle
+This module outlines the standardized procedures for identifying, assessing and responding to risk. Our goal is to embed a proactive, consistent, and resilient risk management culture across the organization.
+
+--- Slide 66 ---
+Stage 1: Identify Potential Risks
+OBJECTIVE
+KEY ACTIONS
+Pinpoint Diverse Threats:
+Systematically identify risks such as cyberattacks, hardware failures, software vulnerabilities,
+or critical skills gaps.
+Utilize Structured Methods:
+Conduct formal audits, analyze threat intelligence, and review past incidents to inform the progress.
+Employ Technical Tools:
+Leverage tools like vulnerability scans and threat modeling to uncover hidden risks.
+To use a structured and systematic approach to recognize
+where the potential for undesired outcomes or opportunities can arise.
+
+--- Slide 67 ---
+Stage 2: Assess the Landscape
+OBJECTIVE
+KEY ACTIONS
+Analyze Key Factors:
+For each risk, consider its causes, sources, and the probability of it occurring.
+Evaluate Outcomes:
+Determine the potential positive or negative outcomes associated with the risk.
+Prepare for Prioritization:
+The results on this analysis will be used to categorize, define, and ultimately prioritize each risk.
+To analyze and evaluate identified risks to understand their causes, sources, and potential consequences.
+TOOLS FOR ADEQUATE RISK ASSESMENT
+Categorize by Type:
+Categorize risks using the standardized
+‘
+Risk Types to ensure consistent analysis and
+reporting across the
+organization.
+Define Probability:
+Use the ‘Risk Probability Guidelines’ to evaluate the likelihood of a risk occurring, removing ambiguity from the assessment.
+Define Impact:
+Use the ‘Risk Impact Guidelines’ to evaluate the potential consequences of a risk, which helps define our risk appetite and informs response options.
+
+--- Slide 68 ---
+Stage 3: Prioritize with Precision
+OBJECTIVE
+To rank risks based on their severity, ensuring focus is
+directed at the most significant threats.
+KEY ACTIONS
+Focus on High-Impact Threats:
+Concentrate on risks that could cause significant downtime, data breaches, or compliance violations
+Use Standardized Values:
+Rank risks according to the impact and probability to ensure objective and consistent prioritization
+Develop a Visual Framework:
+Use the risk ranking from the assessment phase to develop a Heat Map for visual analysis
+
+--- Slide 69 ---
+Stage 4: Develop a Risk Response
+OBJECTIVE
+To systematically create strategies to address
+prioritized risks, guided by our defined risk appetite.
+KEY ACTIONS
+The chosen response should be proportional to the risk's severity and aligned with our strategic goals.
+We have four primary strategies to choose from.
+Mitigate
+THE FOUR STRATEGIC OPTIONS
+Avoid
+Transfer
+Accept
+
+--- Slide 70 ---
+Stage 5: Implement with Purpose
+OBJECTIVE
+To implement the developed response plans with clarity,
+accountability, and timeliness.
+KEY ACTIONS
+Execute Planned Actions:
+Ensure response plans are in place and execute.
+Assign Clear Responsibilities:
+Ensure every action item has a designated owner responsible for its completion.
+Establish and Adhere to Timelines:
+Set realistic deadlines for implementation and track progress against them.
+
+--- Slide 71 ---
+Stage 6: Monitor & Review Continuously
+OBJECTIVE
+To maintain constant vigilance and ensure controls
+remain effective against an evolving threat landscape.
+KEY ACTIONS
+Maintain Environmental Awareness:
+Continuously monitor systems and the external environment for emerging threats and anomalies using automated tools.
+Review and Update Regularly:
+Periodically review risk assessments and update controls to address new threats or changes in the business.
+Proactively Improve Process:
+Continuously review established processes to ensure that controls are adequate and proactively mitigating risk.
+The monitoring and review stage is not an endpoint. The intelligence, data, and insights gathered from our monitoring directly inform the next cycle of risk identification. This transforms our procedure into a dynamic, self-improving system that builds organizational resilience over time.
+
+--- Slide 72 ---
+Risk Identification
+
+--- Slide 73 ---
+A Proactive Guide to Identifying Project Risks
+Effective risk identification combines the right inputs and methods to proactively surface risks early and throughout the lifecycle.
+This module will cover how to apply this approach in practice.
+It is not a one-time activity, but a continuous discipline—moving beyond checklists to a structured approach that provides visibility into uncertainties, dependencies, and constraints before they impact objectives.
+
+--- Slide 74 ---
+The Framework for Identifying Risk
+The sources of information and
+environmental factors that
+reveal potential risks.
+WHERE TO LOOK:
+KEY RISK INPUTS
+The structured methods and collaborative
+approaches used to surface and analyze
+risks from multiple perspectives.
+HOW TO LOOK:
+PROVEN IDENTIFICATION
+TECHNIQUES
+
+--- Slide 75 ---
+Risk Types, Risk Triggers, and Risk Inputs
+
+--- Slide 76 ---
+Key Enterprise Risk Inputs
+
+--- Slide 77 ---
+Collaborative Techniques: Leveraging Collective Expertise
+
+--- Slide 78 ---
+Analytical & Strategic Techniques: Applying Structured Analysis
+
+--- Slide 79 ---
+Conduct Scenario-Based Analysis
+This technique uncovers risks by exploring the chain of consequences from a potential
+cause to its
+ultimate business impact. It helps prioritize issues that could generate multiple
+cascading failures.
+
+--- Slide 80 ---
+Evidence-Based Techniques: Reviewing Artifacts & Data
+
+--- Slide 81 ---
+Understanding Risk Triggers
+
+--- Slide 82 ---
+Understanding Risk Triggers: Your Early Warning System
+This module will cover what risk triggers are and why they are a critical component of effective risk management, how to identify meaningful and actionable triggers, and how triggers differ from risks and issues.
+We will cover common categories of risk, walk through practical, real-world examples, and demonstrate how to define clear thresholds and ownership. Finally, the module will show how to integrate risk triggers into the broader risk management workflow—linking them to risk registers, escalation paths, dashboards, and decision-making processes—to ensure risks are actively monitored and addressed at the right time and level.
+What is a Risk Trigger?
+Risk triggers are early warning
+indicators that
+signal a risk is
+becoming more likely or severe.
+
+--- Slide 83 ---
+When to Define Risk Triggers & Why this is a Critical Step
+Defining these triggers when
+first logging a risk is a critical step. It
+ensures that teams can detect
+emerging problems early and take
+timely action.
+Define Triggers
+Log a Risk
+Provide clear, unambiguous
+signals during tracking and
+high-level reviews, making risk
+status easier to communicate.
+Increase Governance
+Visibility
+Shift the team's focus from
+reactive problem-solving to
+strategic, forward-looking
+oversight.
+Identify and address risks
+before they escalate into
+issues.
+Support Proactive
+Monitoring
+Enable Early
+Detection
+
+--- Slide 84 ---
+Common Categories of Risk Triggers
+While every project's risks are unique, the triggers that signal them often fall into common
+categories. Understanding these categories provides a structured starting point for defining
+effective triggers for your own risks. We will explore seven key categories.
+
+--- Slide 85 ---
+Risk Statements & Associated Triggers
+The risk of outdated technology failing to meet business needs or legacy systems creating operational inefficiencies.
+Technical Triggers
+Occurs when hardware/ software reaches end-of-life, software malfunctions, suffers performance issues, or loses vendor support.
+The risk of federal regulation violations, failure to follow IT standards, inadequate reporting improper payments, disbursement errors.
+Risks of data breaches, unauthorized access, cyber attacks, insider threats, vendor performance.
+Regulatory Triggers
+Delays in implementing mandated policies, missed reporting dates, failure to patch, negative audit findings, duplicate payments, unverified receipts.
+Security & Vendor Triggers
+Triggered by external threats, unusual network activity, outdated systems, contractual disputes from third parties, dependency on procurements.
+Policy & Strategy Triggers
+Triggered by missing or outdated policies, frequent policy exceptions, untrained staff, misalignment between IT investments and mission, funding/budget constraints.
+Risks of inadequate, outdated, or unclear policies or regulations that impact operations, internal/external factors impacting strategy or goals.
+The risk of impacts when resources are inadequate or limited, leading to project failure, poor quality, or missed deadlines.
+The risk of public scrutiny and trust exposure that impacts the organization’s overall reputation.
+Risks involving delays in milestones, cost overruns, loss/misuse of data, or lack of data accuracy/ completeness.
+The risk of organizational culture issues and structural misalignment.
+Personnel Triggers
+Triggered by departing key personnel or mass turnover stalling critical priorities without succession plans or cross-training.
+Reputational Triggers
+Triggered by public perception or media scrutiny, reputation with customers damaging trust or relations.
+Data & Schedule Triggers
+Triggered by lack of clear critical path, well-defined dependencies, absent key resources for entire project, delayed external dependencies, unauthorized access attempts.
+Cultural & Organizational Triggers
+Triggered by unclear roles & responsibilities, key decisions made outside of established governance
+
+--- Slide 86 ---
+Key Takeaways: Shifting to Proactive Risk Management
+Triggers are your early warning
+system for emerging risks.
+They enable you to move from costly, reactive firefighting to efficient, proactive monitoring.
+Identify them using established categories and link them directly to specific risk statements
+in your register.
+Defining triggers is
+not a one-time task but an integral part of the continuous risk management lifecycle.
+
+--- Slide 87 ---
+Understanding Interconnected Business Risks
+
+--- Slide 88 ---
+The Ripple Effect: Understanding Interconnected Risks
+In modern organizations, risks are not isolated—they exist within interconnected ecosystems of teams, systems, vendors, and processes. Without understanding these connections, a single risk can quickly spread, creating broader enterprise exposure.
+
+--- Slide 89 ---
+Many business functions cannot operate autonomously. Their success depends on
+timely inputs, stable systems, and reliable partners. These connections are known as
+dependencies.
+Let's examine a common operational task. On its own, it seems straightforward. But what does it truly depend on to succeed?
+The First Layer: Uncovering Dependency Risks
+
+--- Slide 90 ---
+When Success Relies on an External Factor
+Dependency risks arise when the successful execution of a task, project, or operational
+process relies on an external party, another internal team, a specific technology, or an
+upstream activity.
+
+--- Slide 91 ---
+Examples of Dependencies in the Ecosystem
+These risks are often underestimated because they occur outside the direct control of a
+single team. Early identification is critical for contingency planning.
+
+--- Slide 92 ---
+The Second Layer: Tracing Cascading Effects
+A dependency failure is rarely the end of the story. When one risk is realized, it can trigger
+additional risks or compounding failures across the organization. This is the cascade.
+
+--- Slide 93 ---
+Examples of Cascading Impacts
+Risks that span multiple teams, platforms, or business functions are systemic risks. Analyzing dependencies and cascading impacts allows us to see these hidden vulnerabilities that traditional, isolated
+ranking methods often overlook. Seemingly "moderate" risks may actually present high enterprise exposure when
+viewed through a systemic lens.
+
+--- Slide 94 ---
+Assess Holistically, Not in Isolation
+The most significant threats to your enterprise are not the individual
+risks you can see, but the unseen chain reactions they can trigger.
+Effective risk management requires looking beyond the primary
+event to understand the secondary and tertiary impacts.
+Implement controls not
+just at the source of a risk,
+but also along its potential
+cascade paths.
+Deploy Layered
+Mitigations:
+See how a failure in one
+area can compromise
+the entire enterprise.
+Uncover Systemic
+Weaknesses:
+Give higher urgency to risks
+with broad cascading
+potential, even if their
+initial impact seems low.
+Improve Risk
+Prioritization:
+Pinpoint critical areas
+where multiple
+processes or
+systems converge.
+Identify Single Points
+Of Failure:
+
+--- Slide 95 ---
+Strategies for Effective Risk Mitigation
+
+--- Slide 96 ---
+Our Objective: Building Mitigation Plans that Work
+This guide is designed to move from vague risk statements to effective, measurable,
+and accountable mitigation plans that meaningfully reduce exposure and address root causes.
+
+--- Slide 97 ---
+Distinguishing Inherent vs. Residual Risk
+Shows mitigation effectiveness and
+remaining exposure, which must be
+compared to tolerance thresholds.
+Why it Matters
+The level of risk that remains after
+mitigation efforts are taken.
+Residual Risk
+Helps determine initial exposure and
+urgency.
+Why it Matters
+The level of risk before mitigation or
+controls are applied.
+Inherent Risk
+
+--- Slide 98 ---
+Four Core Strategies for Responding to Risk
+Acknowledge the risk and take no action, typically
+for low-priority risks.
+Accept
+Shift the financial or operational responsibility for
+the risk to a third party.
+Transfer
+Eliminate the risk by ceasing the activity or
+condition that creates it.
+Develop and implement actions to reduce the
+probability or impact of the risk.
+Avoid
+Mitigate
+
+--- Slide 99 ---
+Active Reduction: Strategies to Mitigate and Avoid Risk
+Remove a high-risk feature from scope.
+Select a proven vendor instead of an
+untested one.
+Avoid new, unproven technology.
+Examples
+Change scope, redesign processes, or select
+different technologies to eliminate the source of
+uncertainty.
+Avoid
+Add resource capacity during peak periods.
+Invest in security systems and regularly test
+them.
+Automate operational processes to reduce
+the risk of human error.
+Utilize Al and predictive tools to detect and
+prevent issues.
+Examples
+Implement controls, process improvements, testing,
+or monitoring to decrease risk likelihood or impact.
+Mitigate
+
+--- Slide 100 ---
+Shifting Responsibility: Strategies to Transfer and Accept Risk
+Defined review frequency.
+Plan for ongoing monitoring with defined
+triggers for re-evaluation.
+Formal leadership approval (especially for
+High risks).
+Documented rationale for the decision.
+Requirements for Acceptance
+Enforce vendor SLAs for system uptime or
+delivery timelines.
+Outsource specialized work to expert firms.
+Purchase cybersecurity insurance to cover
+potential losses.
+Examples
+Formally acknowledge a risk when exposure is low,
+the cost of action outweighs the benefit, or the risk
+is unavoidable.
+Shift risk to a third party through contracts, Service
+Level Agreements (SLAs), warranties, or insurance.
+Accept
+Transfer
+
+--- Slide 101 ---
+The Blueprint for an Actionable Mitigation Plan
+
+--- Slide 102 ---
+From Vague Intentions to Measurable Actions
+Weak Mitigation
+Stronger, Measurable Mitigation
+“Monitor vendor progress”
+“Implement
+weekly vendor checkpoint meetings
+with
+delivery milestone tracking
+, escalate after
+one missed milestone
+.”
+“Improve testing”
+“Develop
+automated regression suite for top 20 critical workflows
+and complete performance testing within
+defined thresholds
+.”
+“Add more staff if needed”
+“Add
+two temporary resources
+for data conversion
+by Q2
+to ensure backlog is processed
+before system cutover
+.”
+“Communicate with stakeholders”
+“Send
+biweekly updates
+with KPIs and risk status to stakeholders; maintain decision log in
+Confluence.
+”
+
+--- Slide 103 ---
+Is the Plan Working? Evaluating Residual Risk
+Is any additional mitigation required
+to further reduce exposure?
+Does the remaining
+(residual) risk now fall
+within the approved
+leadership/governance
+tolerance?
+Are the new controls and
+processes sustainable
+over the long term?
+Are all identifed root
+causes addressed,
+not just the
+symptoms?
+Has the likelihood or
+impact of the risk
+meaningfully
+decreased?
+Does the residual risk
+meet our tolerance
+threshold?
+
+--- Slide 104 ---
+A Disciplined Approach to Risk Mitigation
+Effective risk management is not about eliminating all risk, but about
+making deliberate, well-informed decisions to control it.
+
+--- Slide 105 ---
+Common Mistakes to Avoid
+
+--- Slide 106 ---
+The Mitigation Gap: Why Many Risk Plans Fail
+On paper, a risk is mitigated. A plan is documented, an owner is assigned, and a box is checked. But in reality, the vulnerability often remains. This gap between a documented mitigation and a genuine
+reduction in risk is where failures
+occur, leaving the organization exposed. This module provides a framework to close that gap.
+
+--- Slide 107 ---
+Common Mitigation Mistakes
+Common mitigation mistakes are not random. They cluster in three critical phases of the risk
+management process. Mastering these pillars turns mitigation from a bureaucratic exercise into a
+strategic advantage.
+
+--- Slide 108 ---
+From Vague Intentions to Concrete Actions
+“John Smith (Infrastructure analyst) checks
+server access logs daily for unauthorized
+login attempts and escalate anomalies to
+Julia Jones (IT Security Lead) within one
+hour."
+EXCELLENT:
+POOR:
+"Monitor the network activity."
+A strong mitigation action describes exactly
+what will be done, by whom, and how its
+completion can be confirmed. Use strong,
+active verbs.
+Phrases like "monitor," "review," or "address"
+create the illusion of action without
+mandating a specific, verifiable task. They
+are easily deferred and impossible to audit.
+Antidote: Define
+Observable, Verifiable
+Tasks
+Pitfall: Actions are
+Too Vague
+
+--- Slide 109 ---
+Accountability Requires a Name and a Date
+Owner: John Smith, DevOps Project Manager
+Due Date: October 15. 2026
+EXCELLENT:
+POOR:
+Owner: DevOps Team
+Due Date: TBD
+True accountability is singular. Assign
+one individual who is ultimately
+responsible for ensuring the action is
+completed by a specific, calendar-
+based date.
+Assigning an action to a "team" or "department"
+means no single person is accountable.
+Similarly, an absent or distant due date
+("Q4," "Next Year") invites indefinite
+procrastination.
+Antidote: Assign a Single
+Owner
+& a Firm Deadline
+Pitfall: Diffused Ownership &
+Open Timelines
+
+--- Slide 110 ---
+The Litmus Test: Does It Reduce Likelihood or Impact?
+Every mitigation action must be designed to achieve one of two outcomes: make the risk
+event less likely to happen or reduce the severity of its consequences if it does. If an action does neither, it is not a mitigation.
+Excellent Example: “Implement mandatory
+multi-factor authentication (MFA) for all
+external network access."
+Poor Example: "Discuss new phishing threats
+in a team meeting."
+Actions that reduce Impact
+Actions that reduce Likelihood
+Excellent Example: “Establish fully
+redundant,
+geographically separate
+data backups that are tested for full
+recovery on a quarterly basis”
+Poor Example: “Acknowledge the importance
+of data backups."
+
+--- Slide 111 ---
+If You Don't Update the Rank, You Didn't Finish the Job
+Impact
+Probability
+1
+2
+3
+High Impact
+Medium Impact
+Low Impact
+1
+Absolute Certainty risk will occur (>70%)
+2
+Highly Likely risk will occur (40-70%)
+3
+Moderate Likelihood risk will occur (20-40%)
+4
+Low Likelihood risk will occur (<20%)
+Impact
+Probability
+1
+2
+3
+High Impact
+Medium Impact
+Low Impact
+1
+Absolute Certainty risk will occur (>70%)
+2
+Highly Likely risk will occur (40-70%)
+3
+Moderate Likelihood risk will occur (20-40%)
+4
+Low Likelihood risk will occur (<20%)
+Always recalculate and document the residual risk
+rank. This demonstrates the
+ROl
+of the mitigation
+and provides an accurate basis for future risk
+decisions.
+Not updating the risk rank after a mitigation is
+implemented. This leaves an inaccurate and overly
+alarming picture of the current risk posture,
+undermining the value of the mitigation work.
+Antidote: Always Recalculate
+Pitfall: Not Updating Risk Rank
+
+--- Slide 112 ---
+Implementing a Risk Response
+
+--- Slide 113 ---
+Proactive Risk Response: A Guide to Controls & Monitoring
+This module focuses on moving beyond simply reacting to incidents. We will establish a
+framework
+for proactive risk controls and continuous monitoring designed to reduce the
+likelihood and impact
+of risks before they materialize. The goal is to build genuine
+enterprise resilience through a
+structured, defensible system.
+Structured
+Implementation
+
+--- Slide 114 ---
+Three Lines of Defense
+Mechanisms that identify
+events after
+they have
+occurred.
+Detective Controls:
+The Watchtowers
+Corrective Controls:
+The Response Team
+Assets
+Enterprise
+Measures that stop
+undesirable
+events
+before they occur.
+Preventive Controls:
+The Outer Walls
+Procedures that address issues
+when deviations are found.
+
+--- Slide 115 ---
+Preventive Controls: Fortifying the Perimeter
+Establishing clear rules of
+engagement and operational
+standards.
+Organizational Policies
+and Procedures
+Creating a barrier between
+trusted and untrusted
+networks.
+Firewalls
+Securing access to critical
+systems.
+Multi-Factor
+Authentication (MFA)
+These controls are your first and strongest line of defense, designed to stop
+threats before they breach your systems. They are proactive by nature,
+reducing exposure and enforcing compliance at the point of entry.
+
+--- Slide 116 ---
+Detective Controls: Manning the Watchtowers
+Proactively searching for
+weaknesses that could be
+exploited.
+Vulnerability Scans
+Systematically reviewing
+records for anomalies or
+unauthorized activity.
+Inspection Logs
+Monitoring network or system
+activities for malicious actions.
+Intrusion Detection
+Systems
+No defense is impenetrable. Detective controls are essential for identifying when
+a breach has occurred, providing the visibility needed to launch an effective
+response. They assume a breach is possible and focus on rapid identification.
+
+--- Slide 117 ---
+Corrective Controls: Deploying the Response Team
+When a risk materializes and is detected, a swift and
+effective response is
+critical to minimize damage.
+Corrective controls are the pre-planned actions that
+restore systems and processes to their desired state.
+
+--- Slide 118 ---
+The Architectural Blueprint for Effective Controls
+A control is only as effective as its design. A strong defense requires a clear blueprint that ensures every control is robust, accountable, and fit for purpose.
+
+--- Slide 119 ---
+The Continuous Watch: Ensuring Controls Remain Effective
+A fortress cannot be left unattended.
+Monitoring is the active process of
+observing controls to ensure they
+remain effective and to gain early
+indicators of
+risk activation. It
+transforms a static defense into a
+living, responsive system.
+
+--- Slide 120 ---
+A Closer Look: Key Monitoring Mechanisms and Tools
+Trend analysis (tracking
+defects, throughput,
+capacity over time)
+Compliance reports
+Service-level reporting
+Real-time performance
+dashboards
+Automated alerts and
+thresholds
+Predictive Analysis
+Periodic Reporting
+Real-Time Visibility
+Effective monitoring relies on a diverse set of tools that provide different
+l
+enses into
+performance and risk. Key mechanisms include:
+
+--- Slide 121 ---
+The Strategic Payoff: Linking Controls to Risk Mitigation
+Properly implemented controls are not just technical exercises; they are pillars
+of good governance. The linkage between a control and the risk it mitigates must
+be explicit and demonstrable.
+
+--- Slide 122 ---
+Documenting in a Risk Register
+
+--- Slide 123 ---
+From Vague to Valuable: Writing an Actionable Risk Entry
+Critique:
+Specific, measurable, and includes a
+clear, proactive mitigation plan.
+Proactively migrate to new hardware by Q2.
+Perform bi-weekly load testing until
+migration is complete.
+Action/Mitigation:
+Will prevent customer transaction processing
+for up to 4 hours, violating the SLA.
+Impact:
+The primary web server may fail during the
+month-end peak load due to aging hardware.
+Risk:
+Good Example
+Critique:
+Lacks specifics, cause, and a
+measurable impact.
+The action is purely reactive.
+Fix it.
+Action/Mitigation:
+Work will stop.
+Impact:
+Server might go down.
+Risk
+:
+Poor Example
+
+--- Slide 124 ---
+How to Write a Good Risk Statement
+
+--- Slide 125 ---
+The Goal: A Risk Statement That Drives Action
+Risks are articulated in a
+standard format across the
+entire organization.
+The statement enables
+effective mitigation planning
+and governance.
+Everyone understands
+the potential issue,
+without ambiguity.
+A well-constructed risk statement is a powerful tool. It transforms an abstract concern into a clear,
+actionable item for the business.
+
+--- Slide 126 ---
+Poorly Articulated Risks Create Business Friction
+Vague or inconsistent risk statements are more than just a documentation issue, they lead to
+real-world problems.
+Wasted effort: Treating Symptoms over Root Causes
+Teams address symptoms
+instead of the root cause,
+Leading to ineffective mitigation.
+Misaligned Communication: Unclear Risk Landscapes
+Stakeholders and leadership
+receive an inconsistent or
+unclear picture of the risk
+landscape.
+Flawed Governance: Inaccurate Reviews
+Inaccurate reviews lead to poor
+decision-making and resource
+allocation.
+
+--- Slide 127 ---
+The Five Principles of a Strong Risk Statement
+Before learning the formula, we must understand the principles that ensure quality and precision.
+
+--- Slide 128 ---
+Principle 1: Identify the Clear Cause
+Cause
+Symptom
+A strong risk statement begins by
+identifying
+the underlying source,
+condition, or vulnerability.
+Ask “Why?”:
+What is the root condition that gives rise to the potential risk?
+Avoid Symptoms:
+Don’t describe the potential effect; describe the existing reality that creates the risk.
+Symptom:
+“The project might be delayed.”
+Clear Cause:
+“The vendor has not yet confirmed shipment timelines.”
+
+--- Slide 129 ---
+Principle 2: Describe the Specific Event
+The event is the uncertain incident or
+occurrence that could happen if the
+cause is not addressed.
+Be Specific:
+Clearly state what could happen. Avoid generalities.
+Focus on the “What”:
+This is the risk itself.
+Vague:
+"Compliance issues."
+Specific Event:
+" ...there is a risk of non-compliance with new regulations..."
+
+--- Slide 130 ---
+Principle 3: Outline the Measurable Impact
+The impact describes the consequence to the business if the risk event occurs.
+Answer ‘So What?’:
+How does this affect the organization?
+Quantify When Possible:
+Frame the impact in business terms.
+
+--- Slide 131 ---
+Principle 4: Use Objective, Fact-Based Language
+'Increased chance of production defects...
+'A big problem with testing...
+Objective/Neutral
+Subjective/Emotional
+'...a potential slip to the go-live date.'
+'A likely disastrous delay...'
+Risk statements should be free from subjective or emotional terms to maintain credibility and clarity.
+Do:
+Use neutral, descriptive words. Focus on facts and potential outcomes.
+Don’t:
+Use subjective adjectives or hyperbole.
+
+--- Slide 132 ---
+Step 2: Define Mitigation
+Principle 5: Do Not Embed Solutions
+"Recent regulatory updates have not been incorporated
+into current processes (Cause). If there is a regulatory
+audit that identifies gaps between current processes
+and updated requirements (Event)..."
+"There is a risk of non-compliance, so
+we need to update our processes."
+Correct (risk only)
+Incorrect (with solution)
+The risk statement should articulate the risk itself, not the proposed mitigation plan.
+Mixing the risk with the solution confuses the discussion. The mitigation plan is a separate, subsequent step in risk management process.
+Step 1: Define Risk
+
+--- Slide 133 ---
+The Formula for Clarity: Cause
+→
+Event
+→
+Impact
+This simple, logical structure ensures all critical components of a risk are captured.
+It is the framework that puts the five principles into practice.
+
+--- Slide 134 ---
+Building Your Statement with "If-Then"
+The “Cause
+→
+Event
+→
+Impact” structure is most effectively written using an
+"If-Then" format.
+This creates a clear, logical sentence.
+
+--- Slide 135 ---
+Example 1: Loss of Personnel
+Then critical server maintenance will be
+Delayed, system downtime will increase,
+and there will be lack of support for
+production releases (impact)
+If the lead system admin leaves (event)
+There is no Standard Operating Procedure or
+cross training across the System Admins (cause)
+(Lacks cause, specific event, and
+measurable impact.)
+“We might lose our key
+System Admin."
+Strong Statement
+Weak Statement
+
+--- Slide 136 ---
+Example 2: Technical Obsolescence
+Then NSF will be exposed to unpatched, high-
+severity ransomware attacks and compliance
+fines, potentially resulting in downtime costs
+and reputation damage" (impact)
+If
+NSF continues to use Windows Server 2012 after
+the 10/13/2026 end of life date (event)
+NSF essential business applications run on
+Windows Server 2012 that is reaching end-of-life
+on 10/13/2026 (cause)
+(Vague. Why won't we be supported?
+What is the consequence?)
+"We won’t be supported on
+on our OS."
+Strong Statement
+Weak Statement
+
+--- Slide 137 ---
+Example 3: Compliance Risks
+Then that may lead to audit findings or financial penalties (impact)
+If there is a risk of non-compliance (event)
+NSF’s OCIO has issued a mandate to comply with OMB
+M-22-09 (Federal Zero Trust Strategy) (cause)
+(Lacks any specific detail about
+the cause, event, or impact.)
+"Compliance issues may occur."
+Strong Statement
+Weak Statement
+
+--- Slide 138 ---
+Continuous Improvement
+
+--- Slide 139 ---
+The Continuous Improvement Cycle in Risk Management
+This framework transforms ERM into a self-reinforcing cycle. By systematically analyzing trends,
+Integrating
+lessons, and refining our approach, we ensure our risk management capability
+continuously matures.
+
+--- Slide 140 ---
+Phase 1: Analyze Trends & Gain Insights
+Uncovering Hidden Insights Through Trend Analysis
+What Effective Trend Analysis Identifies
+
+--- Slide 141 ---
+Phase 2: Integrate Lessons Learned (1 of 2)
+Integrate Lessons to Strengthen Future Strategy
+Capturing Actionable Knowledge from Experience
+
+--- Slide 142 ---
+Phase 2: Integrate Lessons Learned (2 of 2)
+The Three Pillars of an Effective Retrospective
+
+--- Slide 143 ---
+Phase 3: Implement Improvements - Actively Refining the Framework for Lasting Maturity
+Turning Insights into Systemic Enhancements
+
+--- Slide 144 ---
+
+

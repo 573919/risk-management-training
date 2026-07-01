@@ -1,0 +1,51 @@
+<!-- TEMPLATE: stats-slide
+     Theme options: light (default), dark
+     Use for: facts & figures, key metrics, data highlights, impact numbers
+
+     PLACEHOLDER GUIDE:
+       {{THEME}}            -> light | dark
+       {{SLIDE_NUM}}        -> integer
+       {{LABEL}}            -> eyebrow / section tag
+       {{TITLE}}            -> slide headline (h2)
+       {{STAT_1_VALUE}}     -> large number/stat, e.g. "360K" or "$4.2B"
+       {{STAT_1_LABEL}}     -> descriptor below value, e.g. "employees worldwide"
+       {{STAT_1_CONTEXT}}   -> optional small context line, e.g. "as of FY26" (omit span if unused)
+       {{STAT_2_VALUE}}     -> repeat for second metric
+       {{STAT_2_LABEL}}
+       {{STAT_2_CONTEXT}}
+       {{STAT_3_VALUE}}     -> repeat for third metric
+       {{STAT_3_LABEL}}
+       {{STAT_3_CONTEXT}}
+       {{CLASSIFICATION}}   -> classification class + label, e.g.:
+                              class="footer-classification internal">Internal
+                              or empty string if Non-Sensitive / None
+
+     NOTE: Use .big-number CSS class for the value. Up to 3 stats fit cleanly.
+           For 4+ stats add a fourth .stat-card — the grid stretches to 4 columns.
+-->
+<div class="slide {{THEME}}" data-slide="{{SLIDE_NUM}}">
+  <div class="label">{{LABEL}}</div>
+  <h2>{{TITLE}}</h2>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="big-number">{{STAT_1_VALUE}}</div>
+      <div class="stat-label">{{STAT_1_LABEL}}</div>
+      <div class="stat-context">{{STAT_1_CONTEXT}}</div>
+    </div>
+    <div class="stat-card">
+      <div class="big-number">{{STAT_2_VALUE}}</div>
+      <div class="stat-label">{{STAT_2_LABEL}}</div>
+      <div class="stat-context">{{STAT_2_CONTEXT}}</div>
+    </div>
+    <div class="stat-card">
+      <div class="big-number">{{STAT_3_VALUE}}</div>
+      <div class="stat-label">{{STAT_3_LABEL}}</div>
+      <div class="stat-context">{{STAT_3_CONTEXT}}</div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span {{CLASSIFICATION}}</span>
+    <span class="footer-center">boozallen.com &nbsp;&middot;&nbsp; &copy; 2026 Booz Allen Hamilton, Inc.</span>
+    <div class="slide-number"></div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<!-- TEMPLATE: title-slide
+     Theme options: dark (default), light, teal-hero
+     Use for: opening slide, major section dividers, closing slide
+
+     PLACEHOLDER GUIDE:
+       {{THEME}}            -> dark | light | teal-hero
+       {{SLIDE_NUM}}        -> integer, e.g. 1
+       {{LABEL}}            -> eyebrow text, e.g. "Overview" or "AI Adoption"
+       {{TITLE}}            -> main headline (h1), kept short (≤8 words)
+       {{SUBTITLE}}         -> supporting line beneath title
+       {{CLASSIFICATION}}   -> classification class + label, e.g.:
+                              class="footer-classification internal">Booz Allen Hamilton Internal
+                              class="footer-classification restricted">Booz Allen Hamilton Restricted
+                              class="footer-classification entrusted">Booz Allen Hamilton Entrusted
+                              or empty string if Non-Sensitive / None
+-->
+<div class="slide {{THEME}}" data-slide="{{SLIDE_NUM}}">
+  <div class="label">{{LABEL}}</div>
+  <h1>{{TITLE}}</h1>
+  <p class="subtitle">{{SUBTITLE}}</p>
+  <div class="slide-footer">
+    <span {{CLASSIFICATION}}</span>
+    <span class="footer-center">boozallen.com &nbsp;&middot;&nbsp; &copy; 2026 Booz Allen Hamilton, Inc.</span>
+    <div class="slide-number"></div>
+  </div>
+</div>

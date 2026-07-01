@@ -1,0 +1,51 @@
+<!-- TEMPLATE: placemat-why-built
+     Mode: PLACEMAT (dense reference material — requires .placemat class)
+     Theme options: light (default), dark
+     Use for: "why we built this" slides, offering rationale, investment justification,
+              3-driver problem statements, strategic context pages
+
+     PLACEHOLDER GUIDE:
+       {{THEME}}              -> light | dark
+       {{SLIDE_NUM}}          -> integer
+       {{LABEL}}              -> eyebrow / section tag
+       {{BREADCRUMB}}         -> hierarchical path, e.g. "Core Tech Offerings | Agentic AI"
+       {{TITLE}}              -> slide headline (h2), e.g. "Why We Built It" or "Why We Are Building It"
+       {{OVERVIEW}}           -> 2–4 sentence summary paragraph describing the offering/initiative.
+                                 Wraps in <p>. Appears above the reason cards.
+       {{REASON_1_TITLE}}     -> short driver title (≤5 words), e.g. "Staying Ahead of the Market"
+       {{REASON_1_BODY}}      -> 2–4 sentence explanation of this driver
+       {{REASON_2_TITLE}}     -> repeat for second driver
+       {{REASON_2_BODY}}
+       {{REASON_3_TITLE}}     -> repeat for third driver
+       {{REASON_3_BODY}}
+       {{CLASSIFICATION}}     -> classification class + label, or empty string
+
+     NOTE: Standard 3-reason layout. For 4 reasons, add a fourth .why-built-reason block
+     and update grid to style="grid-template-columns: repeat(4, 1fr)".
+     Keep reason bodies to 2–4 sentences — these are concise driver statements, not essays.
+-->
+<div class="slide placemat {{THEME}}" data-slide="{{SLIDE_NUM}}">
+  <div class="label">{{LABEL}}</div>
+  <div class="breadcrumb">{{BREADCRUMB}}</div>
+  <h2>{{TITLE}}</h2>
+  <p>{{OVERVIEW}}</p>
+  <div class="why-built-grid">
+    <div class="why-built-reason">
+      <h3>{{REASON_1_TITLE}}</h3>
+      <p>{{REASON_1_BODY}}</p>
+    </div>
+    <div class="why-built-reason">
+      <h3>{{REASON_2_TITLE}}</h3>
+      <p>{{REASON_2_BODY}}</p>
+    </div>
+    <div class="why-built-reason">
+      <h3>{{REASON_3_TITLE}}</h3>
+      <p>{{REASON_3_BODY}}</p>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span {{CLASSIFICATION}}</span>
+    <span class="footer-center">boozallen.com &nbsp;&middot;&nbsp; &copy; 2026 Booz Allen Hamilton, Inc.</span>
+    <div class="slide-number"></div>
+  </div>
+</div>

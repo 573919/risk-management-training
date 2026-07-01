@@ -1,0 +1,53 @@
+<!-- TEMPLATE: features-grid-slide
+     Theme options: light (default), dark
+     Use for: capabilities overview, product features, service offerings, team strengths
+
+     PLACEHOLDER GUIDE:
+       {{THEME}}              -> light | dark
+       {{SLIDE_NUM}}          -> integer
+       {{LABEL}}              -> eyebrow / section tag
+       {{TITLE}}              -> slide headline (h2)
+       {{CARD_1_ICON}}        -> icon placeholder — Unicode character, emoji, or leave as "◆"
+                                 for a simple shape; or use <img src="..."> for an image file
+       {{CARD_1_HEADING}}     -> card title (h3), ≤5 words
+       {{CARD_1_BODY}}        -> short description — 1–2 sentences or 2–3 bullets
+       {{CARD_2_ICON}}        -> repeat for each card
+       {{CARD_2_HEADING}}
+       {{CARD_2_BODY}}
+       {{CARD_3_ICON}}
+       {{CARD_3_HEADING}}
+       {{CARD_3_BODY}}
+       {{CLASSIFICATION}}     -> classification class + label, e.g.:
+                                class="footer-classification internal">Internal
+                                or empty string if Non-Sensitive / None
+
+     NOTE: Default layout is 3-up (3 columns). For 4 cards add class "four-up" to .feature-grid.
+           For 2 cards add class "two-up". Each card includes an .icon-circle placeholder.
+           See brand-guidelines for available BAH icon categories and Phosphor Icons CDN.
+-->
+<div class="slide {{THEME}}" data-slide="{{SLIDE_NUM}}">
+  <div class="label">{{LABEL}}</div>
+  <h2>{{TITLE}}</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="icon-circle">{{CARD_1_ICON}}</div>
+      <h3>{{CARD_1_HEADING}}</h3>
+      {{CARD_1_BODY}}
+    </div>
+    <div class="feature-card">
+      <div class="icon-circle">{{CARD_2_ICON}}</div>
+      <h3>{{CARD_2_HEADING}}</h3>
+      {{CARD_2_BODY}}
+    </div>
+    <div class="feature-card">
+      <div class="icon-circle">{{CARD_3_ICON}}</div>
+      <h3>{{CARD_3_HEADING}}</h3>
+      {{CARD_3_BODY}}
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span {{CLASSIFICATION}}</span>
+    <span class="footer-center">boozallen.com &nbsp;&middot;&nbsp; &copy; 2026 Booz Allen Hamilton, Inc.</span>
+    <div class="slide-number"></div>
+  </div>
+</div>

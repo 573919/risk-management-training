@@ -1,0 +1,583 @@
+<!-- TEMPLATE: rom-slide
+     Mode: PLACEMAT (dense reference material — requires .placemat class)
+     Theme options: light (default), dark
+     Use for: ROM one-pager within a deck — three-column layout with scope,
+              benefits, timeline, estimate, and risks on a single slide.
+
+     Derived from the standalone ROM one-pager layout. Adapted to fit within
+     the slide-engine.js deck framework at 1280×720px.
+
+     PLACEHOLDER GUIDE:
+       {{THEME}}                -> light | dark
+       {{SLIDE_NUM}}            -> integer
+       {{BREADCRUMB}}           -> e.g. "Program Name | Investment Proposal"
+       {{TITLE_ACCENT}}         -> accent portion of title (teal-colored)
+       {{TITLE_REST}}           -> remainder of title
+       {{OUTCOME}}              -> 2-3 sentence outcome statement. Use <strong> for teal keywords.
+       {{SCOPE_ITEMS}}          -> <li> items for investment scope (3-4 bullets)
+       {{DELIVERABLE_ITEMS}}    -> <li> items for deliverables (5-7 bullets)
+       {{IMPROVEMENT_ITEMS}}    -> <li> items for areas of improvement (3-4 bullets, bold labels)
+       {{BENEFIT_CAP_ITEMS}}    -> <li> items for capability benefits card (3-4 bullets)
+       {{BENEFIT_SEC_ITEMS}}    -> <li> items for security/compliance benefits card (3-4 bullets)
+       {{BENEFIT_COST_ITEMS}}   -> <li> items for cost benefits card (3-4 bullets)
+       {{COST_CALLOUT}}         -> bold stat in cost card, e.g. "Exact benefits validated<br>in Phase 1 assessment"
+       {{TIMELINE_LABEL}}       -> e.g. "Approach & Estimated Timeline — 10 Months"
+       {{TIMELINE_COLUMNS}}     -> phase columns — use .t-col and .t-col-split/.t-sub for combined phases:
+                                   <div class="t-col">
+                                     <div class="t-col-head">Phase 1 — Mo. 1–3<br>Assess &amp; Design</div>
+                                     <ul><li>Activity 1</li><li>Activity 2</li></ul>
+                                   </div>
+                                   For split phases:
+                                   <div class="t-col t-col-split">
+                                     <div class="t-sub">
+                                       <div class="t-col-head">Phase 3a — Mo. 6–8<br>Build</div>
+                                       <ul><li>...</li></ul>
+                                     </div>
+                                     <div class="t-sub">
+                                       <div class="t-col-head">Phase 3b — Mo. 9–10<br>Hand Off</div>
+                                       <ul><li>...</li></ul>
+                                     </div>
+                                   </div>
+       {{ESTIMATE_ROWS}}        -> <tr> rows for basis of estimate table (role + duration)
+       {{TOTAL_LABEL}}          -> e.g. "NET NEW INVESTMENT"
+       {{TOTAL_RANGE}}          -> e.g. "$680K–$1,020K"
+       {{CLIENT_STAFF_ROWS}}    -> optional <tr> rows for client-side staff (italic style) + explanatory note row
+       {{RISK_ITEMS}}           -> <li> items for risks (3-4 bullets, bold labels)
+       {{ASSUMPTION_ITEMS}}     -> <li> items for assumptions (3 bullets, bold labels)
+       {{CLASSIFICATION}}       -> classification class + label, e.g.:
+                                  class="footer-classification internal">Internal
+                                  or empty string if Non-Sensitive / None
+
+     DENSITY GUIDANCE:
+       Left sidebar: outcome (2-3 lines) + scope (3-4 bullets) + deliverables (6-7 bullets) + improvements (3-4 bullets)
+       Center: 3 benefit cards (3-4 bullets each) + timeline (3 phase columns, or 2 + 1 split)
+       Right sidebar: estimate table (5-6 rows) + risks (3-4 bullets) + assumptions (3 bullets)
+       Font sizes are 0.51–0.67rem. Do not add content beyond these limits — overflow is hidden.
+
+     COLUMN WIDTHS:
+       Left 278px | Center ~707px (1fr) | Right 295px
+       These are tuned for the estimate table and deliverable list. Adjust only if content requires it.
+-->
+<div class="slide placemat {{THEME}}" data-slide="{{SLIDE_NUM}}">
+
+  <style>
+    /* ROM slide scoped styles — augment brand-tokens.css placemat base */
+    [data-slide="{{SLIDE_NUM}}"] .rom-header {
+      background: var(--black);
+      color: var(--white);
+      padding: 9px 22px 10px;
+      border-bottom: 2px solid var(--teal);
+    }
+    [data-slide="{{SLIDE_NUM}}"] .rom-header-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 7px;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .bah-wordmark {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      flex-shrink: 0;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .bah-wordmark .bah-top {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: var(--white);
+      line-height: 1;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .bah-wordmark .bah-sub {
+      font-size: 0.52rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: var(--gray-400);
+      text-transform: uppercase;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .header-sep {
+      width: 1px;
+      height: 30px;
+      background: rgba(255,255,255,0.18);
+      flex-shrink: 0;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .header-breadcrumb {
+      font-size: 0.62rem;
+      color: var(--gray-400);
+      letter-spacing: 0.02em;
+      flex: 1;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .header-breadcrumb strong {
+      color: var(--electric-teal);
+      font-weight: 600;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .header-datestamp {
+      font-size: 0.58rem;
+      color: var(--gray-400);
+      flex-shrink: 0;
+      letter-spacing: 0.04em;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .header-datestamp strong {
+      color: var(--gray-200);
+      display: block;
+      font-size: 0.52rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1px;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .rom-header-title {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .badge-proposal {
+      font-size: 0.5rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: var(--teal);
+      color: var(--white);
+      padding: 3px 9px;
+      border-radius: 3px;
+      flex-shrink: 0;
+      white-space: nowrap;
+      align-self: center;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .rom-header-title h1 {
+      font-size: 1.22rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin: 0;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .rom-header-title h1 .title-accent {
+      color: var(--electric-teal);
+    }
+
+    /* Three-column body */
+    [data-slide="{{SLIDE_NUM}}"] .rom-body {
+      display: grid;
+      grid-template-columns: 278px 1fr 295px;
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .col-left,
+    [data-slide="{{SLIDE_NUM}}"] .col-center,
+    [data-slide="{{SLIDE_NUM}}"] .col-right {
+      padding: 8px 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .col-left { gap: 3px; padding-top: 6px; padding-bottom: 6px; }
+    [data-slide="{{SLIDE_NUM}}"] .col-right { gap: 3px; padding-top: 6px; padding-bottom: 6px; }
+    [data-slide="{{SLIDE_NUM}}"] .col-center {
+      border-left: 1px solid var(--gray-200);
+      border-right: 1px solid var(--gray-200);
+      gap: 8px;
+    }
+
+    /* Section labels */
+    [data-slide="{{SLIDE_NUM}}"] .s-label {
+      font-size: 0.51rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1px;
+    }
+
+    /* Left column blocks */
+    [data-slide="{{SLIDE_NUM}}"] .left-block { flex-shrink: 0; }
+    [data-slide="{{SLIDE_NUM}}"] .left-block p {
+      font-size: 0.63rem;
+      line-height: 1.36;
+      color: var(--gray-700);
+      margin-bottom: 2px;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .left-block p strong { color: var(--black); }
+    [data-slide="{{SLIDE_NUM}}"] .outcome-statement {
+      font-size: 0.66rem;
+      font-weight: 500;
+      line-height: 1.36;
+      color: var(--gray-800);
+    }
+    [data-slide="{{SLIDE_NUM}}"] .outcome-statement strong {
+      color: var(--teal);
+      font-weight: 700;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .left-block ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .left-block ul li {
+      font-size: 0.63rem;
+      line-height: 1.36;
+      padding-left: 1.05em;
+      position: relative;
+      margin-bottom: 1px;
+      color: var(--gray-700);
+    }
+    [data-slide="{{SLIDE_NUM}}"] .left-block ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.52em;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+    [data-slide="{{SLIDE_NUM}}"] .left-block ul li strong {
+      color: var(--gray-800);
+      font-weight: 700;
+    }
+
+    /* Center — benefits */
+    [data-slide="{{SLIDE_NUM}}"] .benefits-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      flex: 1;
+      min-height: 0;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .benefit-card {
+      border: 1px solid var(--teal-border);
+      border-top: 2.5px solid var(--teal);
+      background: var(--teal-light);
+      border-radius: 5px;
+      padding: 8px 10px;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .benefit-card.cost-card {
+      border-top-color: #7aad00;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .benefit-card-title {
+      font-size: 0.51rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 5px;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .benefit-card.cost-card .benefit-card-title { color: #4e7a00; }
+    [data-slide="{{SLIDE_NUM}}"] .benefit-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .benefit-card ul li {
+      font-size: 0.67rem;
+      line-height: 1.4;
+      padding-left: 0.85em;
+      position: relative;
+      margin-bottom: 3px;
+      color: var(--gray-700);
+    }
+    [data-slide="{{SLIDE_NUM}}"] .benefit-card ul li::before {
+      content: '\00B7';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 1.1em;
+      line-height: 1;
+      top: 0.05em;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .cost-callout {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #3d6b00;
+      line-height: 1.2;
+      margin-top: 5px;
+      padding-top: 5px;
+      border-top: 1px solid rgba(90,122,0,0.2);
+    }
+
+    /* Center — timeline */
+    [data-slide="{{SLIDE_NUM}}"] .timeline-section {
+      flex: 2;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      flex: 1;
+      min-height: 0;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .t-col-split { padding: 0; gap: 0; }
+    [data-slide="{{SLIDE_NUM}}"] .t-sub {
+      flex: 1;
+      min-height: 0;
+      padding: 7px 8px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .t-sub + .t-sub {
+      border-top: 1.5px dashed var(--teal-border);
+    }
+    [data-slide="{{SLIDE_NUM}}"] .t-col {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-top: 2.5px solid var(--teal);
+      border-radius: 4px;
+      padding: 7px 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .t-col-head {
+      font-size: 0.53rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 5px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--gray-200);
+      line-height: 1.3;
+      flex-shrink: 0;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .t-col ul {
+      list-style: none;
+      padding: 0;
+      flex: 1;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .t-col ul li {
+      font-size: 0.63rem;
+      line-height: 1.38;
+      padding-left: 0.85em;
+      position: relative;
+      margin-bottom: 4px;
+      color: var(--gray-700);
+    }
+    [data-slide="{{SLIDE_NUM}}"] .t-col ul li::before {
+      content: '\00B7';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 1.1em;
+      line-height: 1;
+      top: 0.05em;
+    }
+
+    /* Right column */
+    [data-slide="{{SLIDE_NUM}}"] .right-block { flex-shrink: 0; }
+    [data-slide="{{SLIDE_NUM}}"] .estimate-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 4px;
+      table-layout: fixed;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .estimate-table th {
+      font-size: 0.57rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gray-600);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 2px 0 4px;
+      text-align: left;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .estimate-table th:first-child { width: calc(100% - 82px); }
+    [data-slide="{{SLIDE_NUM}}"] .estimate-table th:last-child { width: 82px; text-align: right; }
+    [data-slide="{{SLIDE_NUM}}"] .estimate-table td {
+      font-size: 0.65rem;
+      line-height: 1.35;
+      color: var(--gray-700);
+      padding: 2px 0;
+      border-bottom: 1px solid var(--gray-100);
+      vertical-align: top;
+      word-wrap: break-word;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .estimate-table td:last-child {
+      text-align: right;
+      font-size: 0.63rem;
+      color: var(--gray-600);
+    }
+    [data-slide="{{SLIDE_NUM}}"] .estimate-table tr.total-row td {
+      font-weight: 800;
+      color: var(--black);
+      border-top: 2px solid var(--gray-800);
+      border-bottom: none;
+      padding-top: 5px;
+      font-size: 0.7rem;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .estimate-table tr.total-row td:last-child {
+      color: var(--electric-fuchsia);
+      font-size: 0.78rem;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .right-block ul.risk-list,
+    [data-slide="{{SLIDE_NUM}}"] .right-block ul.assumption-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 2px;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .right-block ul.risk-list li,
+    [data-slide="{{SLIDE_NUM}}"] .right-block ul.assumption-list li {
+      font-size: 0.62rem;
+      line-height: 1.32;
+      padding-left: 0.85em;
+      position: relative;
+      margin-bottom: 3px;
+      color: var(--gray-700);
+    }
+    [data-slide="{{SLIDE_NUM}}"] .right-block ul.risk-list li::before {
+      content: '\00B7';
+      position: absolute;
+      left: 0;
+      color: var(--electric-fuchsia);
+      font-weight: 700;
+      font-size: 1.1em;
+      line-height: 1;
+      top: 0.05em;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .right-block ul.assumption-list li::before {
+      content: '\00B7';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 1.1em;
+      line-height: 1;
+      top: 0.05em;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .right-block ul li strong {
+      color: var(--gray-800);
+      font-weight: 700;
+    }
+
+    /* Override default slide padding — ROM uses its own internal spacing */
+    [data-slide="{{SLIDE_NUM}}"].slide.placemat {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    [data-slide="{{SLIDE_NUM}}"] .rom-footer {
+      height: 30px;
+      border-top: 1px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22px;
+      flex-shrink: 0;
+      font-size: 9px;
+      font-weight: 500;
+      color: var(--gray-600);
+    }
+  </style>
+
+  <!-- HEADER -->
+  <div class="rom-header">
+    <div class="rom-header-top">
+      <div class="bah-wordmark">
+        <span class="bah-top">Booz Allen</span>
+        <span class="bah-sub">Hamilton</span>
+      </div>
+      <div class="header-sep"></div>
+      <div class="header-breadcrumb">{{BREADCRUMB}}</div>
+    </div>
+    <div class="rom-header-title">
+      <div class="badge-proposal">Investment Proposal</div>
+      <h1>
+        <span class="title-accent">{{TITLE_ACCENT}}</span>
+        {{TITLE_REST}}
+      </h1>
+    </div>
+  </div>
+
+  <!-- THREE-COLUMN BODY -->
+  <div class="rom-body">
+
+    <!-- LEFT: Context -->
+    <div class="col-left">
+      <div class="left-block">
+        <div class="s-label">Primary Outcome</div>
+        <p class="outcome-statement">{{OUTCOME}}</p>
+      </div>
+      <div class="left-block">
+        <div class="s-label">Investment Scope &amp; Need</div>
+        <ul>{{SCOPE_ITEMS}}</ul>
+      </div>
+      <div class="left-block">
+        <div class="s-label">Deliverables</div>
+        <ul>{{DELIVERABLE_ITEMS}}</ul>
+      </div>
+      <div class="left-block">
+        <div class="s-label">Areas of Improvement</div>
+        <ul>{{IMPROVEMENT_ITEMS}}</ul>
+      </div>
+    </div>
+
+    <!-- CENTER: Benefits + Timeline -->
+    <div class="col-center">
+      <div class="benefits-row">
+        <div class="benefit-card">
+          <div class="benefit-card-title">Capability Benefits</div>
+          <ul>{{BENEFIT_CAP_ITEMS}}</ul>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card-title">Security &amp; Compliance Benefits</div>
+          <ul>{{BENEFIT_SEC_ITEMS}}</ul>
+        </div>
+        <div class="benefit-card cost-card">
+          <div class="benefit-card-title">Cost Benefits</div>
+          <ul>{{BENEFIT_COST_ITEMS}}</ul>
+          <div class="cost-callout">{{COST_CALLOUT}}</div>
+        </div>
+      </div>
+      <div class="timeline-section">
+        <div class="s-label" style="margin-bottom:5px;">{{TIMELINE_LABEL}}</div>
+        <div class="timeline-grid">
+          {{TIMELINE_COLUMNS}}
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Estimate + Risks + Assumptions -->
+    <div class="col-right">
+      <div class="right-block">
+        <div class="s-label">Basis of Estimate</div>
+        <table class="estimate-table">
+          <thead>
+            <tr>
+              <th>Resource (FTE)</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{ESTIMATE_ROWS}}
+            <tr class="total-row">
+              <td>{{TOTAL_LABEL}}</td>
+              <td>{{TOTAL_RANGE}}</td>
+            </tr>
+            {{CLIENT_STAFF_ROWS}}
+          </tbody>
+        </table>
+      </div>
+      <div class="right-block">
+        <div class="s-label">Considerations &amp; Risks</div>
+        <ul class="risk-list">{{RISK_ITEMS}}</ul>
+      </div>
+      <div class="right-block">
+        <div class="s-label">Assumptions &amp; Dependencies</div>
+        <ul class="assumption-list">{{ASSUMPTION_ITEMS}}</ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="rom-footer">
+    <span {{CLASSIFICATION}}</span>
+    <span>boozallen.com &nbsp;&middot;&nbsp; &copy; 2026 Booz Allen Hamilton, Inc.</span>
+    <span class="slide-number"></span>
+  </div>
+
+</div>
