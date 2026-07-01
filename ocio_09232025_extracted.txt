@@ -1,0 +1,541 @@
+﻿OCIO Enterprise Risk Management FrameworkAugust 2025OCIO Enterprise Risk Management FrameworkAugust 2025
+OCIO Enterprise Risk Management Framework
+August 2025
+OCIO Enterprise Risk Management Framework
+August 2025
+Overview:
+The Enterprise Risk Management Framework defines OCIO’s structured approach to identifying, assessing, mitigating, and escalating risks to strengthen operational resilience. This plan presents a systematic risk management process tailored to OCIO’s unique needs and provides an overview of the risk management model, along with the procedures and processes used to manage risks effectively.
+Purpose
+The purpose of this Enterprise Risk Management Framework is to establish a comprehensive approach to identifying, assessing, and mitigating risks across OCIO. It is designed to protect sensitive data, ensure service continuity, and maintain compliance with governmental policies and standards. By fostering proactive decision-making, the framework strengthens the security, reliability, and efficiency of OCIO operations while minimizing potential disruptions to government services.
+Authority
+This framework, authorized by the Office of the Chief Information Officer (OCIO), establishes a shared approach to risk management and empowers designated OCIO federal leadsand stakeholders to carry out these processes in alignment with the guidance outlined in this document.
+Scope
+This frameworkapplies to all NSF systems, applications, networks, and personnel within the OCIO.
+Roles & Responsibilities
+Roles
+Responsibilities
+CIO
+CIO overseeing and setting the tone for clear ownership, awareness, and transparency of riskacross IT and the business
+Approve organizational risk appetite andrisk tolerance
+Communicate key risk information to Enterprise IT Governance Board, OD, NSF Executive Leadership Team (ELT)
+Align risk posture with the organizational mission, strategy and regulatory environment
+Champion the integration of risk considerations into strategic planning and digital transformation initiatives
+Endorse risk management frameworks, policies and escalation models
+Ensure risk responsibilities are clearly delegated and embedded across IT functions
+Reviews enterprise risk profile that provides an executive level brief of critical risks
+Decision making authority for the Enterprise IT Governance Board; Business Demand Governance Board Member
+Enterprise IT Governance Board
+Addresses escalated IT risks, issues or corrective action plans
+Sets the strategic direction and goals for NSF IT
+Establishes IT priorities and approves enterprise-wide and significant IT initiatives ensuring alignment with NSF strategies
+Monitors progress of major IT programs, projects and implementations to ensure objects are achieved
+Business Demand Governance Board
+Evaluates risks associated with new requirements (valid business needs) and alignment ofresources, technology, and initiatives with mission needs and strategic priorities
+Monitors progress of approved initiatives to ensure results meet business need objectives
+Decision making authority falls with the Chief Management Office (CMO) and Chief Science Officer (CSO)
+OCIO Risk Governance Lead
+Ensure risk management is integrated into the organization’s governance structure, supporting risk process, informed decision-making, and strategic goals
+Establish and maintain enterprise risk management framework/plan and processes, including defining and periodically updating risk categories, risk definitions, impact/probability matrices and scoring methods
+Oversight and monitoring of risk activities and controls
+Promote risk-aware culture through training and communication, providing templates, tools and training to help teams across the organization identify and document risks consistently
+Maintain centralized risk register
+Facilitate risk workshops and assessments
+Watch for trends across multiple risk submissions and flag cross-cutting/enterprise-level risks that require coordination beyond individual teams
+Establishrisk dashboards & enterprise risk profile and facilitate review by CIO
+Continuously evaluate risk management capabilities against the ERM plan and iteratively enhance risk management practices over time
+OCIO Branch Chiefs
+Serve as the initial escalation point for risks rated moderate and above or those flagged by risk owners, federal leads, or staff
+Assess risk validity, impact and urgency to determine if it can be mitigated at the branch/division level or whether it needs to be escalated to OCIO leadership
+Validate that mitigations of escalated risks are on track and sufficient
+Ensure visibility of cross-cutting risks that might affect other branches/divisions or strategic objectives
+Responsible for escalating high/critical risks to OCIO leadership for discussion around risk tolerance & risk trade-offs while providing context, business impact and mitigation status
+Promote a culture where staff feel empowered to proactivelyraise risks
+Appointrisk owners within the branch/division
+Accountable for ensuringadoptionof risk procedures and risk processes by risk owners
+Consistently review risk dashboards & enterprise risk profile
+Risk Owners
+Identify, evaluate, and document risks following the prescribed risk procedures and risk processes and ensure consistency and comparability of risks across the organization
+Manage implementation of mitigation/risk activitiesand regularly track the status of the risk and the effectiveness of the mitigation activities
+Document risks in the risk register with new developments or changes in conditions, progress on mitigations, reassessment of risk level (if needed). Stay alert to signs that the risk is increasing or materializing. Document closure in the risk register including rationale, summary of actions taken and any lessons learned.
+Self-manage risks flagged as ‘low’ and escalate ‘moderate’ or ‘high’risksto Branch Chief for discussion around risk tolerance & risk trade-offs
+Ensure risk reporting is transparent, data-driven & action-oriented
+Continuously scan for emerging risks & ensure monitoring/stress-tests are occurring as needed
+Review enterprise risk profile
+The table below depicts which Governing Body evaluates and/or identifies the defined risk types as seen in Appendix A. For those risk types that are governed by both the Business Demand Governance Board and the Enterprise IT Governance Board, the table below highlights which board is deemed ‘primary’ and provides guidance on when to engage the other governing board.
+Risk Type
+Business Demand Governance Board (BDGB)
+Enterprise IT Governance Board (EITGB)
+Roles & Responsibilities for Risk Types with Shared Governing Bodies
+Budget Risk
+X
+Change Management Risk
+X
+Compliance Risk
+X
+X
+The EITGB is the primary board for compliance risksas this is an IT control (e.g. cyber security compliance, data handling requirements). The BDGB should be engaged when a compliance risk could affect mission execution or the progress of an approved initiative.
+Cultural/ Organizational Risk
+X
+X
+The BDGB is the primary board for cultural/organizational risksas this directly impacts whether prioritized initiatives can be staffed, sustained and mission aligned. The EITGB will monitor impacts to the IT workforce and adapt IT strategy accordingly.
+Data Risk
+X
+X
+The EITGB is the primary board for data risksas they own the enterprise IT data governance frameworks, quality control, backup/recovery, architecture for resilience. The BDGB should be engaged when impacts to data affects decision-making, requires external reporting/escalation, and/or creates compliance exposure.
+Fraud Risk
+X
+Financial Risk
+X
+X
+The BDGB is the primary board for financial risk as significant financial loss can undermine NSF’s ability to execute mission priorities and can lead to external reporting obligations & reputational damage. The EITGB should focus on whether IT systems, architecture, and controls are mature enough to prevent/recover from IT failures that lead to financial loss.
+Governance Risk
+X
+Personnel Risk
+X
+X
+The primary board for personnel risks will be dependent on whether the risk is in relation to key vacancies, skills gaps or turnover in critical NSF or OCIO-wide roles.The BDGB is the primary board when personnel risk directly affects the success of an initiative and its alignment to mission. The EITGB will be the primary board when the risk is focused around IT-specific personnel gaps and their impact the enterprise IT strategy.
+Policy Risk
+X
+X
+The BDGB is the primary board for policy risks as they are responsible if a policy could cause major funding loss, mission shutdown, or program cancellation. They should be made aware when policy is unclear or if it is creating bottlenecks. The EITGB should be engaged in relation to IT policy to ensure alignment with federal mandates and enterprise standards.
+Quality Risk
+X
+Reputational Risk
+X
+X
+The BDGB is the primary board for reputational risks as they will own accountability for reputational exposure. The EITGB should be engaged when reputational harm arises from IT failures (e.g. data breach, outages,etc.)
+Schedule Risk
+X
+Scope Risk
+X
+Security Risk
+X
+X
+The EITGB is the primary board for security risksas they are accountable for security and data protection. This includes owning posture against breaches, resilience strategies and compliance with federal standards. The BDGB should be engaged as needed for awareness or when a security event impacts mission execution or public trust.
+Strategic Risk
+X
+System Operational Risk
+X
+Technology Obsolescence Risk
+X
+Vendor/Third-Party Risk
+X
+Risk Procedures
+The following risk procedure describes the standardized and customized steps to managing risks. The standardized risk procedures should be adhered to across OCIO, while the customized risk procedures are additional procedures required for specific service areas.
+Standardized Risk Procedures
+Standardized risk proceduresshould be appliedconsistently across the OCIO, encompassing risk identification, assessment, prioritization, development and implementation of response plans,as well as ongoing monitoring and review.
+Risk Identification: Identify and pinpoint potential risks using a structured and systematic approach to recognizing where the potential for undesired outcomes or opportunities can arise, such as cyberattacks, hardware failures, software vulnerabilities, or skills gapsthrough audits, threat intelligence, using tools like vulnerability scans, threat modeling, or reviewing past incidents.
+Assess: Analyze and evaluate risks considering the causes, sources, probability of the risk occurring, the potential positive or negative outcomes, and then prioritizing the results of the analysis.
+Categorize risks by type using the guidance in Appendix A: Risk Types
+Define probability and impact using the guidance in Appendix B: Risk Probability Guidelinesand Appendix C: Risk Impact Guidelines, which supports in understanding the risk appetitetoidentify and assess a range of risk response options.
+Prioritization: Rank risks based on their severity, focusing on those that could cause significant downtime, data breaches, or compliance violations.
+Rank risks using the guidance in Appendix D: Risk Values
+Assess risks using the probability and impact to develop a Heat Map. Sample Heat Map in Appendix E: Heat Map Sample
+Develop Risk Response Plans by systematically identifying and assessing a range of risk response options guided by risk appetite and creating strategies to address risks:
+Mitigate: Develop and implement strategies to reduce or eliminate the impact of identified risks. For example, apply patches, firewalls, encryption, or access controls
+Avoid: Prevent the risk from happening by identifying the activity or condition that creates the risk. For example, redesign systems to eliminate vulnerabilities
+Transfer: Shift responsibilities for the risk to another party. For example, use cyber insurance or outsource certain functions
+Accept: Acknowledge low-priority risks with minimal impact because the risk is within the tolerance level or because the cost of mitigation is deemed too high
+Implement Risk Responses: Execute the plans, ensuring actions like software updates, employee training, or backup systems are in place. Assign clear responsibilities and timelines.
+Monitor and Review: Continuously monitor the environment using tools like intrusion detection systems or log analysis. Regularly review risk assessments, update controls for new threats.Continuously review established processes to ensure adequate controls are implemented to mitigate risk proactively.
+Examples of risk monitoring measures are as follows and additional guidance is in Appendix G: Sample Checklist of Control Categories
+Security vulnerability alerts and automated patch management via Renovate
+Tracking of CPU, memory, disk usage via AWS CloudWatch
+Performance issue alerts via AppDynamics
+Auto-correction of misconfigured resources via AWS Config
+Anomaly detection & alerts on user behavior via Splunk
+Implementation of Zero Trust Architecture for network & identity security
+Disaster Recovery
+AI-powered risk analytics tools
+Mature operational/compliance/security dashboards
+Customized Risk Procedures
+Customized risk proceduresare essential to describe the detailed risk approach that is specific to each service area (i.e., security).The customized risk procedures should complement while still adhering to the standard risk procedures.
+Risk Processes
+While the risk procedure describes the steps to managing risks, the risk process describes the process for risk documentation, communication, escalation, training, and reporting.
+Risk Register
+Currently risks are documented in disparate risks registers using different tools across OCIO and there is an effort to consolidate to migrate to the ServiceNow Project Portfolio Management module. Once complete, this section will be updated with a link to the new OCIO Enterprise Risk Register. Until that time, all risks should continue to be documented in the current Risk Registerand at a minimum, each risk should includethe following:
+Risk: concise statement of the risk (what might happen and why)
+Impact: what happens if the risk materializes
+Description: context, conditions, background
+Action/Mitigation: planned response strategy and proactive controls
+Contingency/Closure: fallback plan if risk occurs and criteria for closing risk
+Date risk was identified
+Possible impacted date
+Probability
+Impact
+Risk rating, based on probability and impact
+In addition, the risk should include a review workflow for federal risk owners to review each risk relevant to their managed project/initiative.
+Communication & Escalation
+Communication enables effective management and mitigation of potential hazards and involves sharing information about potential threatsto help understand and take appropriate actions.
+Risks should be escalated adhering to the escalation matrix, as described below.
+Risk Value
+Escalation Description
+Governing Body
+Escalation Action
+Communication and Reporting Channel
+Low
+Manage within team/portfolio
+Risk Owner and Federal Lead
+Risk owner and/or federal lead independently manage risk activities as prescribed in risk procedures and processes
+Risk owner and/or federal lead review and mitigate risks at the team level. Include other teams for cross cutting risk impacts
+Risk owner and/or federal lead tracks risk trends and escalates if trends worsen
+Internal team meetings
+Medium
+Risk Owner/Federal Lead informs Branch Chief who conducts risk reviews
+Branch Chiefs
+Same as 'Low', plus:
+Branch Chiefs reviews and coordinates risks and mitigation impacts across OCIO
+Branch Chief division level meetings
+Risk dashboard review during daily OCIO 9am tag-up
+High
+Branch Chiefs escalate to CIO and Enterprise IT Governance Board. As needed, immediate executive briefing to NSF Executive Leadership Team (ELT), engagement of Business Demand Governance Board, and/or potential crisis response
+Enterprise IT Governance Board, and as needed Business Demand Governance Board and NSF ELT
+Same as 'Medium', plus:
+Branch Chiefsescalate to CIO and Enterprise IT Governance Board
+Branch Chiefs reviews risk in conjunction with CIO and Enterprise IT Governance Board for discussion around risk tolerance and risk trade-offs
+CIO approves risk tolerance and response plan
+As needed, engagement with Business Demand Governance Board if risk is impacting the ability for approved initiatives to meet business needs/objectives(Note: additional guidance on when to engage the Business Demand Governance Board can be found in the Roles & Responsibilities Section)
+Rapid response plan, escalation to NSF ELT, potential need to report external to NSF
+Senior Staff Meetings (or impromptu as needed)
+Enterprise IT Governance Board meetings
+As needed, Business Demand Governance Board meetings
+As needed, as soon as possible (NSF ELT Meeting if soon approaching)
+Training
+Risk management training equips professionals with the knowledge and skills to identify, assess, and manage risks effectively, ultimately mitigating potential threats and enhancing organizational resilience. Effective training is the foundation to helping OCIO stakeholders in improved decision making, increased operational efficiency, reduced costs, and improved compliance.
+OCIO-wide Enterprise Risk Management trainingis required for key risk roles that cover:
+Section 1: Foundation of Risk Management
+Section 2: How to Identify Risks
+Section 3: Risk Assessment & Prioritization
+Section 4: Developing Action/Mitigation Plans
+Section 5: Proactive Risk Mitigation through Controls
+Section 6: Monitoring, Reporting & Continuous Improvement
+Reporting
+Risk reporting is crucial for proactive threat detection, informed decision-making, and maintaining compliance. It helps identify potential vulnerabilities and take corrective measures, ultimately minimizing the impact of incidents like cyberattacks and data breaches. Risk reporting shouldinclude all risks across OCIO and shared during various communication channels as described in Risk Escalation section. Risk reporting should also be standardized and automated, where possible.
+Risk Report
+Description
+Purpose
+Enterprise Risk Dashboard
+Displays real-time risks, for example, risks by levels, category and ratings, heat map, incident summary and response/ resolution status.See Appendix E: Heat Map Sampleand Appendix F: Sample Dashboard
+Risk Owners/Federal Leadsto review risk status and prioritize mitigations and discuss risk initiatives, risk response plans, as well as escalate, as needed. Risk owners/Federal Leads and Branch Chiefs to analyze risk trends, emerging risks, incident status impact/response/ resolution, post incident actions, and preventative measures
+Enterprise Risk Profile
+Prioritized portfolio level inventory of the most significant risks identified and assessed through the risk assessment process
+Portfolio view of high rated risks from the Risk Registerand reviewed and approved by the CIO.
+Enterprise Risk Profile will be a filtered/queried view that includes risks with a 'High' risk rating, at a minimum
+AppendixA:Risk Types
+Risk Type
+Risk Description
+Example Risk Triggers
+Budget Risk
+Cost creep or miscalculation of initial costs that result in inaccurate baseline against which to estimate and compare future costs (initial cost
+Misestimation of life-cycle costs and exceeding forecasts (life-cycle costs); lack of cost controls
+Scope creep
+Schedule delays
+Poorly defined requirements
+Inaccurate cost estimates
+Changes in government regulations that require project modifications
+Change Management Risk
+Changes to IT systems, processes or organizational structures that are not effectively assessed or communicated resulting in user resistance, failure to achieve intended outcomes, or unsustainable customer service support
+Users or stakeholders not adequately informed of upcoming changes
+Potential for end-user resistance or confusion
+Lack of training on a new system/process
+Compliance Risk
+Federal Regulation Violations: non-compliance with federal guidance
+Failure to follow IT standards: NIST SP 800-53, FISMA, FedRAMP
+Inadequate Reporting & Documentation: Improper record-keeping/lack of audit trails
+Delays in implementing mandated federal policies or directives
+Missed submission dates for required reports
+Failure to apply required security patches
+Delays addressing findings from internal audits or external assessments
+Cultural/ Organizational Risk
+Internal cultural, behavioral, or structural issues within an organization that hinder performance, morale, or adaptability
+Poor leadership decisions or lack of transparent communication.
+Low employee engagement or dissatisfaction due to inadequate recognition
+Data Risk
+The accuracy, completeness, and consistency of data ensuring data is reliable and trustworthy for use in decision-making and other processes
+Loss/misuse of data or information
+Human error where manual processes in place causing potential for mistakes during data entry (typos, incorrect formatting), accidental deletion or modification of data, incorrect data entry or reporting, or misconfiguration of systems or procedures
+Inconsistencies or corruption due to system and software issues where software bugs exist, system failures, hardware malfunctions, or data transmission errors (network interruptions, packet loss)
+Unauthorized access, data breaches and cyberattacks that compromise the integrity of data, or unauthorized modifications or manipulations of data
+Data transfer issues that could cause inconsistent data formats or data typesduring data transfer or replication between systems
+Fraud Risk
+Deceptive or dishonest activities for personal or organizational gain.
+Weak internal controls: inadequate segregation of duties, lack of independent checks, insufficient oversight
+Inadequate security measures: lack of proper controls over funds, inventory, or other valuable assets
+Broad access/permission to information
+Weaknesses in IT systems that can create opportunities for fraud
+High staff turnover that can disrupt internal controls
+Financial Risk
+Improper payments & fraudulent disbursements: errors or fraudulent disbursement of grants leading to financial loss
+Deviations from standard approval workflow (not utilizing a segregation of duties)
+Potential for ineligible or unverified recipients
+Potential for duplicate payments
+Governance Risk
+Ineffective decision-making structures, unclear accountability or limited oversight resulting in poor organizational directions, misaligned priorities or non-compliance with regulations/policies.
+Ineffective or poorly designed governance processes that create loopholes and undermine the organization’s overall governance structure
+Unclear roles & responsibilities such as weak segregation of duties, lack of ownership/decision-making
+Key decisions made outside of established governance structures
+Personnel Risk
+Possibility of impacts when resources are inadequate or limited, leading to project failure, poor quality, missed deadlines, etc.
+Personnel changes, such as departing key personnel or mass turnover stalling critical priorities; no succession plans or cross-training in place
+Skill gaps, prolonged vacancies, or lack of expertise in critical roles impacting decision-making or delivery timelines
+Resource overallocation across multiple projects
+Delays in hiring or onboarding new staff
+Policy Risk
+Inadequate, outdated, or unclear policies or regulations that impact operations
+Missing or outdated policies
+Frequent policy exceptions or waivers being granted
+Staff unaware or untrained on policies
+Audit findings tied to policy weaknesses
+Quality Risk
+Possibility of a defect or failure that can negatively impact the quality of a product, service or process
+High defect rates in testing or production or inadequate testing due to time or resource constraints
+Spike in customer complaints or negative feedback or non-compliance with quality standards/ specifications, or inconsistent or poorly documented processes
+Reputational Risk
+Public scrutiny, media exposure, stakeholder trust issues: mismanaged grants or cybersecurity breaches resulting in public/congressional scrutiny
+Reputation with customers that would risk damaging customer trust or relations, possibly leading negative reviews
+Public perception or media scrutiny that harms the Foundation’s reputation
+Schedule Risk
+Project delay or insufficient time to complete milestones leading to missed deadlines, cost overruns.
+Planning & estimation not based on historical data or realistic assumptions.  Lack of clear critical path and well-defined dependencies, sufficient buffers or contingency time for unforeseen delays
+Key resources not available for entire project durations. Risks of resource burnout or turnover
+External dependencies & integration that could delay progress. Integration of different modules are not well-coordinated and tested
+Scope Risk
+Possibility of uncertain events that can negatively impact a project’s objectives leading to rework, cost overruns, attrition, etc.
+Lack of consensus on business objectives
+History of stakeholder requests for additional features or changes, ambiguity in project requirements or deliverables, scope creep (e.g., unauthorized additions to project scope)
+Business changes in priorities or market conditions that could cause scope risk
+Lack of a clear scope baseline or approval process
+Security Risk
+Data breaches & Unauthorized Access/Compromised Accounts: sensitive grant application data, PII, financial details
+Ransomware & Cyber Attacks: phishing, malware, etc.
+Insider Threats: Employees or contractors with access to grants management systems intentionally or unintentionally comprising security
+Cloud & Third-party: vulnerabilities in third party platforms
+External threats, such as the latest cyber security threats and trends. Data breaches or leaks reported in similar industries.
+Unusual network activity (e.g., spikes in traffic, unauthorized access attempts)
+Cyber detection of malware or phishing attempts, alerts from intrusion detection systems or firewalls, employee reports of suspicious emails or system behavior
+Outdated systems, software or unpatched vulnerabilities
+Strategic Risk
+Internal or external factors impacting strategy that affect theFoundation's ability to achieve its long-term goals and objectives (e.g., misaligned priorities, failure to adapt to changing environments)
+Misalignment between IT investments and Foundation’s mission/business goals
+Leadership turnover causing changes in vision or strategic direction
+Funding/budget constraints undermining delivery of strategic initiatives
+System Operational Risk
+System downtime/ technical failures: platform outages impacting end-users’ ability to submit proposals/financial requests, view proposals/reports, review proposals; not following configuration management best practices, etc.
+Business continuity disruption of day-to-day operations, causing a halt in critical services or workflows
+Increase in system error logs, failed backups or data replication failures
+Rising incident response times or unresolved tickets
+Technology Obsolescence Risk
+Outdated technology no longer meets the current needs of a business or industry due to advancements or changing requirements
+Lack of modernization (technical obsolescence)/ technical debt): legacy systems creating inefficiencies, security vulnerabilities, and increased maintenance costs
+Hardware failures, such as servers, network devices, etc. failing or reaching their end-of-life
+Software malfunctions or bugs that indicate outdated software, performance issues, unsupported vendor issues
+Vendor no longer provides updates, patches, or support for older products
+Regulatory changes requiring specific technology upgrades or security measures
+Evolving industry standards and technological advancements making older technologies obsolete
+Incompatibility issues, such as new software or hardware being incompatible with existing systems, causing disruptions
+Lack of scalability with outdated technology that is not able to handle increased workloads or business needs as the organization grows
+Vendor/Third-Party Risk
+External providers such as third-party vendors, contractors or suppliers fail to deliver as expected, resulting in operational disruption, security exposure, etc.
+Communication misalignment or contractual disputes from third-party vendors or partners
+Choosing investments that depend on technologies/applications that require procurements from a particular vendor/supplier (monopoly)
+Appendix B: Risk Probability Guidelines
+Probability of Occurrence
+Description
+Complexity Considerations
+1 - Absolute
+(Probability of occurrence >70%)
+This risk is expected to occur and/or has occurred numerous times historically
+Highly complex, multi-stakeholder, cross-agency initiatives with unclear ownership
+No proven precedent for success
+Rapidly changing or poorly defined technology landscape/business requirements
+Not tested
+2 - Highly Likelihood
+(Probability of occurrence ~40% -70%)
+The risk has a high chance of occurring and/or has some history of occurrence historically
+Significant interdependencies across teams, systems or agencies (potentially in conjunction with an accelerated timeline)
+Extremely customized solution with high levels of integration
+Somewhat ambiguous requirements
+Minimally tested
+3–Moderate Likelihood
+(Probability of occurrence ~20-40%)
+The risk may occur but is not highly probable, some history of occurrence with similar scenarios
+Moderate complexity with defined but evolving processes
+Some dependencies on other teams/systems, external agencies, third-party vendors
+Requirements may require minor interpretation
+Moderately tested
+4 - Low Likelihood
+(Probability of occurrence <20%)
+The risk is not expected to occur based off current conditions, limited historical precedent
+Low complexity, mostly repeatable work with defined processes
+Minimal to no interdependencies on other teams/systems, external agencies, third-party vendors
+Long-standing stable technologies in place
+Repeatable, fully or nearly fully automated processes
+Clear requirements
+Thoroughly or mostly tested
+Appendix C: Risk Impact Guidelines
+Impact
+1 – High Impact
+2 – Medium Impact
+3 – Low Impact
+Budget Impact
+Devastating impact over $X, requiring major budget reallocation, potentially jeopardizing the entire project and requiring significant changes to the project's objectives or even cancellation
+Noticeable impact between $X-X requiring significant adjustments or rework and potentially impacting some project deliverables
+Minor impact between $X-X requiring minor adjustments but still manageable within the overall budget
+Change Management Impact
+NSF-wide or scientific-community confusion to change; failure to adopt new system/processes; significant training, communication and/or knowledge management gaps; failed transformation initiative
+Moderate user resistance to change across subset of OCIO system users; training, communication and/or knowledge management gaps
+Minor resistance or slow adoption to change that may take longer but can be managed through reinforcement & communication
+Compliance Impact
+Non-compliance with key federal regulations/mandates that could lead to funding impacts, legal action, investigations, fines, or severe audit findings
+Slight delays or minor penalties in implementing regulations/mandates or audit deficiencies identified. Moderate impact on agency operations, resolvable with adjustments
+Minimal compliance impact, potential delays in implementing regulations/ mandates but within federal guidelines. No penalties: minor compliance issues that require process improvements but do not trigger the need for major oversight
+Cultural/ Organizational Impact
+Severe disruption to organizational culture NSF wide (toxic culture), mass resignations, or loss of trust
+Localized dissatisfaction within OCIO branches/divisions, misalignment, cultural strain or miscommunication that impact collaboration
+Isolated morale, complaints, or team cohesion issues with quick recovery
+Data Integrity Impact
+Inaccurate or incomplete data impacting decision-making, reporting or compliance requiring extensive recovery and validation efforts; NSF-wide data loss or corruption impacting public trust
+Data governance issues causing inefficiencies or rework in operations or data analytics but with manageable, targeted corrections
+Some data quality issues with minor operational impact, easily fixed
+FinancialImpact
+Financial loss over $Xthat requirescorrective action and triggersOMB/PIIA reporting thresholds; could impact ability to secure future appropriations. Large-scale systemic failure with potential to undermine public trust in grant program integrity; could result in major federal investigations; high reputational, compliance, and political fallout
+Financial loss between $X-X that requires corrective action at the program level, but no OMB/PIIA reporting triggered
+PIIA: Payment Integrity Information Act of 2019
+Minimal financial loss below $X; easily correctable without external reporting; no disruption to program delivery
+Fraud Impact
+Substantial/widespread financial loss, significant operational disruptions, and serious damage to foundation's reputation, potentially leading to legal consequences
+Moderate financial loss, some operational disruption, and potential reputational damage
+Low impact on the organization that is isolated to one minor incident that could lead to a small financial loss and minor operational disruption, but would not significantly affect the foundation's overall financial health or reputation
+Governance Impact
+Lack of decision-making clarity leading to duplicated efforts or failed mission execution; complete breakdown in accountability or oversight resulting in mission failure funding loss or legal exposure
+Inconsistent governance or oversight across OCIO causing delays or confusion in execution
+Minor governance gaps: decisions may take longer but operations continue; impacts can be easily overcome with communication
+Operational Impact
+Operational mission disruption across OCIO community, failure impacting multiple systems, outage/mission disruption lasting greater than X days, permanent data loss, inability to recover without external intervention
+Partial mission service disruption across OCIO, outage of more than X hours, notable delays in business operations, degraded system performance
+Minimal impact on operations, little noticeable effect on service delivery, resolved with minimal effort; service degradation but alternative processes/workarounds available
+Personnel Impact
+Key vacancies, skills gaps or turnover in critical NSF or OCIO-wideroles impacting decision-making or delivery timelines; minimal to no cross-training or succession planning in place
+Staffing challenges within OCIO causing minor delays or reallocation of work; partial backfill strategies and some cross-training established
+Temporary shortages within OCIO branch/divisions but easily mitigated due to established backfill strategy or established cross-training
+Policy Impact
+Policy shifts delay programs or requires significant changes in direction with strong opposition from key stakeholders; federal/legislative changes or major policy failure that cause major funding loss, mission shutdown, or program cancellation
+Adjustments to policy require re-scoping but are manageable, due to moderate policy delays or resistance from specific groups
+Minor policy adjustments needed with small operational implications and limited stakeholder pushback
+Quality Impact
+Significant quality issues, requiring extensive rework or redesign; major defects or failures, rendering deliverables unusable or unsafe
+Moderate quality issues, fixable with planned quality assurance efforts
+Minor quality issues, addressed through routine quality controls
+Reputational Impact
+NSF-wide concerns, significant public and stakeholder concerns/dissatisfaction, audit findings resulting in significant concerns, regulatory scrutiny, long-term damage to reputation
+Internal OCIO-level concerns, no public concerns, stakeholder complaints requiring clarification, audit findings resulting in moderate concerns
+Internal branch/division-level concerns, no public concerns, stakeholder complaints requiring clarification
+Schedule Impact
+Unrecoverable delays for fixed date deadlines, jeopardizing critical milestones, lapse in service of a mission critical function, or significant cost implications
+Recoverable delays for fixed date deadlines, with manageable milestone adjustments, temporary lapse in service of a non-mission critical or non-key function, or little cost implications
+Recoverable delays for fixed date deadlines, with minor impact on milestones, no lapse in service of function, or no cost implications
+Scope Impact
+Significant scope reduction or expansion, altering core project objectives or impacting key deliverables
+Moderate scope adjustments, manageable without altering core objectives
+Minor scope tweaks, no impact on core objectives
+Security Impact
+Cybersecurity breach exposing sensitive data or safety (e.g. PII, IC), critical infrastructure attack, unauthorized system access causing widespread disruption or major harm, requiring major remediation
+Potential harm to operations, assets, or individuals that goes beyond a minor convenience but doesn’t involve breach of sensitive data or safety
+Minor security threat that could lead to unsuccessful intrusion attempts, controls in place to mitigate threats; contained security incident expected to have limited impact
+Strategic Impact
+NSF's long-term mission/goals are compromised; IT strategy is misaligned with mission priorities
+Moderate misalignment with OCIO strategic planning, however there is an ability to shift priorities with minimal fallout
+Minor discrepancies between OCIO strategic planning and execution; those discrepancies are not impacting NSF’s mission; can be easily corrected with communication
+Technology Obsolescence Impact
+Key systems approaching end-of-life, causing instability, outages or high maintenance costs or no implementation plan for remediation; system failure across NSF due to unsupported or legacy technologies, lack of updates/patches for security vulnerabilities
+Decreased efficiency or workaround required due to outdated platforms, potential performance issues are surfacing, talent shortage due to tech obsolescence, internal technologies not compatible with external innovations/emerging technology
+Minor delays in system updates; non-critical legacy systems pending modernization; minimal impact on operations; minor user experience issues
+Vendor/Third-Party Impact
+Mission critical vendors or critical dependencies fail to meet contractual obligations, halts operations, violates compliance, causes a breach or causes system wide breakdowns with no backup, workaround, or exit plan
+Inconsistency in vendor delivery, some moderate integration challenges, or quality delivery concerns cause delays, but are manageable with oversight or planned adjustments
+General performance of vendors/third parties is strong; Occasional vendor performance issues or missed SLAs; no significant dependencies on one vendor
+Appendix D:Sample Risk Value
+ImpactProbability
+1
+2
+3
+High Impact
+Medium Impact
+Low Impact
+1
+High
+High
+Medium
+Absolute Certainty risk will occur (>70%)
+2
+High
+High
+Medium
+Highly Likely risk will occur (40-70%)
+3
+Medium
+Medium
+Low
+Moderate Likelihood risk will occur (20-40%)
+4
+Medium
+Low
+Low
+Low Likelihood risk will occur (<20%)
+Appendix E: Sample Heat Map(add from SN-PPM)
+Appendix F:Sample Risk Dashboard(add from SN-PPM)
+Appendix G: Sample Checklist of Control Categories
+Control Category
+Control Type
+Control Description
+Application & Cloud Monitoring
+Application Performance Monitoring
+Tracks response times, uptime, and performance bottlenecks.
+Cloud Security & Compliance Monitoring
+Ensures cloud workloads meet security policies and detect misconfigurations.
+Container & Microservices Monitoring
+Observes Kubernetes, Docker, and serverless environments for performance and security.
+Business & Operational Monitoring
+Service Management Monitoring
+Tracks ticket resolution times and service health.
+Financial & Cost Monitoring
+Prevents cost overruns and optimizes resource allocation.
+User Experience (UX) Monitoring
+Gathers insights on website/app usability and performance.
+Data & Compliance Monitoring
+Data Loss Prevention
+Prevents unauthorized access or sharing of sensitive data.
+Compliance Auditing
+Ensures adherence to regulatory requirements.
+Backup & Disaster Recovery Monitoring
+Verifies data integrity and recoverability.
+DevOps & Infrastructure Monitoring
+Log & Event Monitoring
+Uses tools like Splunk
+Infrastructure as Code (Isac) Monitoring
+Detects misconfigurations in Terraform, Ansible, or Kubernetes
+CI/CD Pipeline Monitoring
+Ensures build stability, deployment success rates, and rollback readiness.
+Endpoint & Device Monitoring
+Endpoint Detection & Response
+Detects malware, unauthorized device access, and suspicious activities.
+Mobile Device Management
+Ensures compliance with remote work and BYOD policies.
+Patch & Vulnerability Management
+Scans for outdated software and missing security patches.
+Network Monitoring
+Real-Time Traffic Analysis
+Monitors network traffic for unusual patterns
+Bandwidth Utilization & Performance
+Identifies network bottlenecks and ensures optimal speed.
+Firewall & VPN Monitoring
+Tracks unauthorized access attempts and VPN usage anomalies.
+Security Monitoring
+Intrusion Detection & Prevention Systems
+Detects and blocks suspicious activity in real time.
+Security Information & Event Management
+Aggregates logs, detects anomalies, and triggers alerts.
+Zero Trust & Identity Access Monitoring
+Ensures continuous authentication and monitors for unauthorized access.
+Threat Intelligence & Behavior Analytics
+Uses AI/ML to detect anomalies in user behavior.
