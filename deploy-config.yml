@@ -7,3 +7,4 @@ presentations:
     deploy: true
     package_manager: npm
     node_version: 20
+
