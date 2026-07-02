@@ -38,6 +38,12 @@ export const sections: Section[] = [
           execution of identification, assessment, mitigation, escalation,
           reporting, and continuous improvement.
         </p>
+        <div className="graphic-strip">
+          <div className="graphic-pill">Enterprise Scope</div>
+          <div className="graphic-pill">Role Accountability</div>
+          <div className="graphic-pill">Standard Procedures</div>
+          <div className="graphic-pill">Continuous Monitoring</div>
+        </div>
       </>
     ),
   },
@@ -80,12 +86,32 @@ export const sections: Section[] = [
     title: "CIO Accountabilities",
     variant: "default",
     body: (
-      <ul>
-        <li>Sets risk tone for ownership, awareness, and transparency across IT and business.</li>
-        <li>Approves organizational risk appetite and risk tolerance boundaries.</li>
-        <li>Aligns risk posture to mission objectives, strategy, and regulatory context.</li>
-        <li>Reviews enterprise risk profile and communicates key risks to governance and ELT.</li>
-      </ul>
+      <>
+        <ul>
+          <li>Sets risk tone for ownership, awareness, and transparency across IT and business.</li>
+          <li>Approves organizational risk appetite and risk tolerance boundaries.</li>
+          <li>Aligns risk posture to mission objectives, strategy, and regulatory context.</li>
+          <li>Reviews enterprise risk profile and communicates key risks to governance and ELT.</li>
+        </ul>
+        <div className="tile-grid cols-2">
+          <div className="tile-card">
+            <h4>Strategic Alignment</h4>
+            <p>Connect risk posture to mission outcomes and enterprise priorities.</p>
+          </div>
+          <div className="tile-card">
+            <h4>Risk Appetite</h4>
+            <p>Set tolerance boundaries for governance trade-off decisions.</p>
+          </div>
+          <div className="tile-card">
+            <h4>Executive Communication</h4>
+            <p>Surface high-consequence risks to ELT and governance boards.</p>
+          </div>
+          <div className="tile-card">
+            <h4>Oversight</h4>
+            <p>Validate accountability is embedded across IT functions.</p>
+          </div>
+        </div>
+      </>
     ),
   },
   {
@@ -139,12 +165,21 @@ export const sections: Section[] = [
     title: "Risk Type Catalog",
     variant: "accent",
     body: (
-      <ul>
-        <li>Includes budget, schedule, scope, quality, personnel, and change management risks.</li>
-        <li>Includes compliance, security, operational, technology obsolescence, and data risks.</li>
-        <li>Includes governance, strategic, policy, reputational, fraud, and financial risks.</li>
-        <li>Includes vendor and third-party dependency risk for external delivery exposure.</li>
-      </ul>
+      <>
+        <ul>
+          <li>Includes budget, schedule, scope, quality, personnel, and change management risks.</li>
+          <li>Includes compliance, security, operational, technology obsolescence, and data risks.</li>
+          <li>Includes governance, strategic, policy, reputational, fraud, and financial risks.</li>
+          <li>Includes vendor and third-party dependency risk for external delivery exposure.</li>
+        </ul>
+        <div className="icon-band">
+          <div className="icon-node"><span>⚖</span><p>Compliance</p></div>
+          <div className="icon-node"><span>🛡</span><p>Security</p></div>
+          <div className="icon-node"><span>📊</span><p>Financial</p></div>
+          <div className="icon-node"><span>🧩</span><p>Operational</p></div>
+          <div className="icon-node"><span>🔗</span><p>Vendor</p></div>
+        </div>
+      </>
     ),
   },
   {
@@ -210,12 +245,23 @@ export const sections: Section[] = [
     title: "Standard Procedure Steps 5-6: Implement and Monitor",
     variant: "default",
     body: (
-      <ul className="stacked">
-        <li>Execute updates, training, controls, and contingency measures by timeline.</li>
-        <li>Assign clear responsibility and track action progress to completion.</li>
-        <li>Monitor using intrusion detection, log analysis, cloud metrics, and anomaly alerts.</li>
-        <li>Reassess controls regularly and update risk posture for emerging threats.</li>
-      </ul>
+      <>
+        <ul className="stacked">
+          <li>Execute updates, training, controls, and contingency measures by timeline.</li>
+          <li>Assign clear responsibility and track action progress to completion.</li>
+          <li>Monitor using intrusion detection, log analysis, cloud metrics, and anomaly alerts.</li>
+          <li>Reassess controls regularly and update risk posture for emerging threats.</li>
+        </ul>
+        <div className="process-flow">
+          <div className="flow-step"><strong>Plan</strong><p>Define actions and ownership.</p></div>
+          <div className="flow-arrow">→</div>
+          <div className="flow-step"><strong>Execute</strong><p>Implement controls and tasks.</p></div>
+          <div className="flow-arrow">→</div>
+          <div className="flow-step"><strong>Observe</strong><p>Monitor signals and behavior.</p></div>
+          <div className="flow-arrow">→</div>
+          <div className="flow-step"><strong>Adapt</strong><p>Reassess and improve posture.</p></div>
+        </div>
+      </>
     ),
   },
   {
@@ -245,12 +291,20 @@ export const sections: Section[] = [
     title: "Required Risk Register Fields",
     variant: "default",
     body: (
-      <ul>
-        <li>Risk statement, impact, description, mitigation/action, contingency/closure criteria.</li>
-        <li>Date identified, possible impact date, probability, impact, and derived risk rating.</li>
-        <li>Federal risk-owner review workflow for project/initiative relevance.</li>
-        <li>Updates include new developments, mitigation progress, reassessment, and closure rationale.</li>
-      </ul>
+      <>
+        <ul>
+          <li>Risk statement, impact, description, mitigation/action, contingency/closure criteria.</li>
+          <li>Date identified, possible impact date, probability, impact, and derived risk rating.</li>
+          <li>Federal risk-owner review workflow for project/initiative relevance.</li>
+          <li>Updates include new developments, mitigation progress, reassessment, and closure rationale.</li>
+        </ul>
+        <div className="tile-grid cols-4">
+          <div className="tile-card compact"><h4>Risk</h4><p>Cause and event clarity.</p></div>
+          <div className="tile-card compact"><h4>Rating</h4><p>Probability + impact value.</p></div>
+          <div className="tile-card compact"><h4>Actions</h4><p>Mitigation and contingency.</p></div>
+          <div className="tile-card compact"><h4>Review</h4><p>Owner validation and closure.</p></div>
+        </div>
+      </>
     ),
   },
   {
@@ -280,12 +334,19 @@ export const sections: Section[] = [
     title: "Escalation Matrix",
     variant: "default",
     body: (
-      <ul className="stacked">
-        <li>Low: managed by Risk Owner/Federal Lead at team or portfolio level.</li>
-        <li>Medium: Branch Chiefs coordinate cross-OCIO mitigation and review trends.</li>
-        <li>High: escalate to CIO and Enterprise IT Governance Board for tolerance/trade-off decisions.</li>
-        <li>As needed: engage BDGB, NSF ELT, rapid response, and external reporting channels.</li>
-      </ul>
+      <>
+        <ul className="stacked">
+          <li>Low: managed by Risk Owner/Federal Lead at team or portfolio level.</li>
+          <li>Medium: Branch Chiefs coordinate cross-OCIO mitigation and review trends.</li>
+          <li>High: escalate to CIO and Enterprise IT Governance Board for tolerance/trade-off decisions.</li>
+          <li>As needed: engage BDGB, NSF ELT, rapid response, and external reporting channels.</li>
+        </ul>
+        <div className="escalation-ladder">
+          <div className="ladder-rung low"><span>Low</span><p>Team + Portfolio</p></div>
+          <div className="ladder-rung med"><span>Medium</span><p>Branch Chief Review</p></div>
+          <div className="ladder-rung high"><span>High</span><p>CIO + EITGB Decision</p></div>
+        </div>
+      </>
     ),
   },
   {
@@ -342,12 +403,24 @@ export const sections: Section[] = [
     title: "Reporting Artifacts",
     variant: "default",
     body: (
-      <ul>
-        <li>Enterprise Risk Dashboard: real-time risk levels, categories, ratings, and heat map insights.</li>
-        <li>Enterprise Risk Profile: prioritized portfolio of highest-rated risks for CIO approval.</li>
-        <li>Use outputs in meetings across team, Branch Chief, governance board, and executive levels.</li>
-        <li>Reporting channels align to escalation tier and incident urgency.</li>
-      </ul>
+      <>
+        <ul>
+          <li>Enterprise Risk Dashboard: real-time risk levels, categories, ratings, and heat map insights.</li>
+          <li>Enterprise Risk Profile: prioritized portfolio of highest-rated risks for CIO approval.</li>
+          <li>Use outputs in meetings across team, Branch Chief, governance board, and executive levels.</li>
+          <li>Reporting channels align to escalation tier and incident urgency.</li>
+        </ul>
+        <div className="tile-grid cols-2">
+          <div className="tile-card dashboard-card">
+            <h4>Operational Dashboard</h4>
+            <p>Live status, trend indicators, incident summaries, and control health.</p>
+          </div>
+          <div className="tile-card dashboard-card">
+            <h4>Executive Profile</h4>
+            <p>Condensed high-risk portfolio used for tolerance and resource decisions.</p>
+          </div>
+        </div>
+      </>
     ),
   },
   {
@@ -413,12 +486,25 @@ export const sections: Section[] = [
     title: "Appendix D/E/F/G Practitioner Summary",
     variant: "default",
     body: (
-      <ul>
-        <li>Appendix D provides sample risk-value matrix to standardize severity ranking.</li>
-        <li>Appendix E/F provide sample heat map and dashboard reference artifacts.</li>
-        <li>Appendix G defines control categories: security, network, endpoint, data, and DevOps.</li>
-        <li>Control checklist maps monitoring activities to concrete operational safeguards.</li>
-      </ul>
+      <>
+        <ul>
+          <li>Appendix D provides sample risk-value matrix to standardize severity ranking.</li>
+          <li>Appendix E/F provide sample heat map and dashboard reference artifacts.</li>
+          <li>Appendix G defines control categories: security, network, endpoint, data, and DevOps.</li>
+          <li>Control checklist maps monitoring activities to concrete operational safeguards.</li>
+        </ul>
+        <div className="mini-matrix">
+          <div className="mcell high">High</div>
+          <div className="mcell high">High</div>
+          <div className="mcell med">Medium</div>
+          <div className="mcell high">High</div>
+          <div className="mcell high">High</div>
+          <div className="mcell med">Medium</div>
+          <div className="mcell med">Medium</div>
+          <div className="mcell med">Medium</div>
+          <div className="mcell low">Low</div>
+        </div>
+      </>
     ),
   },
   {
