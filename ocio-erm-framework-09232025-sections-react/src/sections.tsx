@@ -173,11 +173,11 @@ export const sections: Section[] = [
           <li>Includes vendor and third-party dependency risk for external delivery exposure.</li>
         </ul>
         <div className="icon-band">
-          <div className="icon-node"><span>⚖</span><p>Compliance</p></div>
-          <div className="icon-node"><span>🛡</span><p>Security</p></div>
-          <div className="icon-node"><span>📊</span><p>Financial</p></div>
-          <div className="icon-node"><span>🧩</span><p>Operational</p></div>
-          <div className="icon-node"><span>🔗</span><p>Vendor</p></div>
+          <div className="icon-node"><span>CP</span><p>Compliance</p></div>
+          <div className="icon-node"><span>SC</span><p>Security</p></div>
+          <div className="icon-node"><span>FN</span><p>Financial</p></div>
+          <div className="icon-node"><span>OP</span><p>Operational</p></div>
+          <div className="icon-node"><span>TP</span><p>Vendor</p></div>
         </div>
       </>
     ),
